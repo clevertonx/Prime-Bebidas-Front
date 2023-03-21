@@ -8,21 +8,21 @@
 
 
 :root {
-  
-  }
-  
-  * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  main {
-    width: 90vw;
-    margin: 0 auto;
-  }
+  --amarelo-queimado: #a87818;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+}
