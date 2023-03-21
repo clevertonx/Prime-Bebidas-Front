@@ -9,4 +9,9 @@
     display: flex;
     padding: 100px;
     font-weight: bolder;
+    font-size: 1.5vw;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #a87818;
+    text-decoration-thickness: 3px;
 }
