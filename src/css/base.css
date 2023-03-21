@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url(reset.css);
+@import url(components/cabecalho.css);
+@import url(components/section-home.css);
+@import url(components/titulo-section.css);
+@import url(components/section-mais-procurados.css);
+@import url(components/card.css);
+
+
+:root {
+  
+  }
+  
+  * {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  main {
+    width: 90vw;
+    margin: 0 auto;
+  }

@@ -1,0 +1,42 @@
+#section-home {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+#section-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../imgs/beer-2439237_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(55%);
+    z-index: -1;
+}
+
+.conteudo-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    font-size: 5em;
+    z-index: 0;
+}
+
+.conteudo-home h2 {
+    font-size: 80px;
+    filter: none;
+}
+
+.conteudo-home p {
+    font-size: 30px;
+    filter: none;
+}
