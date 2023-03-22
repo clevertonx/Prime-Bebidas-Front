@@ -1,0 +1,20 @@
+#section-sobre .imagem-sobreposta img {
+    width: 400px;
+    height: 300px;
+    /* z-index: -1; */
+    /* display: flex; */
+}
+
+#section-sobre .texto-sobreposto {
+    position: absolute;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transform: translate(50%, 300%);
+}
+
+#section-sobre img{
+    position: relative;
+    transform: translate(50%, 0%);
+}
