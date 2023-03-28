@@ -6,9 +6,9 @@
     text-transform: uppercase;
     line-height: 1.5;
     justify-content: center;
-    display: flex;
+    display: inline-block;
     padding: 100px;
-    font-weight: bolder;
+    font-weight: bolder;    
     font-size: 1.5vw;
     text-decoration: underline;
     text-underline-offset: 20px;

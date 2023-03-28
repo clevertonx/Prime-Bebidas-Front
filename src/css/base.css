@@ -5,10 +5,13 @@
 @import url(components/titulo-section.css);
 @import url(components/section-mais-procurados.css);
 @import url(components/card.css);
+@import url(components/section-categorias.css);
+@import url(components/section-sobre.css);
 
 
 :root {
   --amarelo-queimado: #a87818;
+  --cinza-fundo: #f9f9f9;
 }
 
 * {
@@ -20,6 +23,7 @@ body {
   font-family: 'Roboto', sans-serif;
   width: 100vw;
   height: 100vh;
+  background-color: var(--cinza-fundo);
 }
 
 main {

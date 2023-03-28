@@ -1,0 +1,8 @@
+#section-sobre {
+    position: relative;
+    top: calc(9vh - 80px);
+    /* A posição da seção é definida abaixo da primeira seção */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
