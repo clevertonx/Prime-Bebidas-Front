@@ -1,26 +1,33 @@
 .card-grande {
-    width: 250px;
-    margin: 50px;
+    width: 60vw;
+    margin: 40px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
     background-color: white;
-}
+    display: flex;
+}   
 
 .card-grande img {
-    width: 100%;
-    height: auto;
+    width: 15vw;
+    height: 15vh;
     margin-bottom: 10px;
+}
+
+.card-grande h4 {
+    padding: 30px;
 }
 
 .card-grande .preco {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    padding: 30px;
 }
 
 .card-grande .descricao {
     font-size: 16px;
     margin-bottom: 20px;
+    padding: 40px;
 }

@@ -1,17 +1,18 @@
 #section-categorias {
     position: relative;
-    top: calc(18vh - 80px);
+    top: calc(9vh - 80px);
     /* A posição da seção é definida abaixo da primeira seção */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    height: 700px;
 }
 
 .nav-categorias {
     margin-right: 20px;
-    margin-top: 22vh;
-    display: flex;
+    margin-top: 20px;
+    margin-bottom: 80px;
 }
 
 .nav-categorias ul {
