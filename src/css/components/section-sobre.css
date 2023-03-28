@@ -1,20 +1,25 @@
-#section-sobre .imagem-sobreposta img {
+#section-sobre .imagem-sobreposta {
     width: 400px;
     height: 300px;
-    /* z-index: -1; */
-    /* display: flex; */
 }
 
-/* #section-sobre .texto-sobreposto {
-    position: absolute;
-    color: black;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    transform: translate(50%, 300%);
-} */
+.imagem-sobreposto{
+    display: flex;
+}
+
+.texto-sobreposto {
+   position: absolute;
+   width: 35%;
+   transform: translate(85%,0%);
+   margin: 5%;
+}
+
+.texto-sobreposto p{
+ text-align: center;
+}
 
 #section-sobre img{
     position: relative;
-    transform: translate(50%, 0%);
+    transform: translate(145%, 0%);
 }
+
