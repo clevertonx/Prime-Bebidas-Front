@@ -1,8 +1,33 @@
 #section-sobre {
     position: relative;
-    top: calc(9vh - 80px);
+    top: calc(7vh - 80px);
     /* A posição da seção é definida abaixo da primeira seção */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
+}
+
+.imagem-sobreposto {
+    display: flex;
+}
+
+.texto-sobreposto {
+    position: absolute;
+    width: 25%;
+    transform: translate(-55%, -10%);
+    margin: 5%;
+    background-color: white;
+}
+
+.texto-sobreposto p {
+    text-align: center;
+    margin: 30px;
+    padding: 5px;
+}
+
+#section-sobre img {
+    position: relative;
+    transform: translate(45%, 0%);
+    height: 75vh;
 }

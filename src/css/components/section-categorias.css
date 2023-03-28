@@ -1,12 +1,11 @@
 #section-categorias {
     position: relative;
-    top: calc(9vh - 80px);
+    top: calc(7vh - 80px);
     /* A posição da seção é definida abaixo da primeira seção */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    height: 700px;
 }
 
 .nav-categorias {
