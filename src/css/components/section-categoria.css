@@ -1,25 +1,27 @@
-#section-categoria .subtitulo-categoria {
-    font-family: 'Roboto', sans-serif;
-    margin-top: 30px;
-    text-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
-   
-    justify-content: center;
+#section-categoria  {
+    position: relative;
+    top: calc(9vh - 80px);
+    /* A posição da seção é definida abaixo da primeira seção */
     display: flex;
-    /* padding: 100px; */
-    font-weight: bolder;
-    font-size: 1vw;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-color: var(--amarelo-queimado);;
-    text-decoration-thickness: 3px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f9f9f9;
 }
 
 .lista-desordenada{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 45px;
 }
 
-.lista-desordenada a{
+.lista-desordenada li a{
 padding-left: 10px;
+background-color: var(--amarelo-queimado);
+text-decoration: none;
 }
+
+a:visited {
+    color: white;
+}
+

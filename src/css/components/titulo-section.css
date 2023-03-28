@@ -12,7 +12,7 @@
     font-size: 1.5vw;
     text-decoration: underline;
     text-underline-offset: 20px;
-    text-decoration-color: var(--amarelo-queimado);;
+    text-decoration-color: var(--amarelo-queimado);
     text-decoration-thickness: 3px;
 }
 
@@ -30,6 +30,6 @@
     font-size: 1.5vw;
     text-decoration: underline;
     text-underline-offset: 20px;
-    text-decoration-color: var(--amarelo-queimado);;
+    text-decoration-color: var(--amarelo-queimado);
     text-decoration-thickness: 3px;
 }

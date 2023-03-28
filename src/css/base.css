@@ -12,6 +12,7 @@
 
 :root {
   --amarelo-queimado: #a87818;
+  --fundo-cinza: #f9f9f9;
 }
 
 * {
@@ -23,6 +24,7 @@ body {
   font-family: 'Roboto', sans-serif;
   width: 100vw;
   height: 100vh;
+  background-color: var(--fundo-cinza);
 }
 
 main {
