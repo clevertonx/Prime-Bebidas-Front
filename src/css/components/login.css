@@ -1,0 +1,28 @@
+#section-login {
+    position: relative;
+    top: calc(7vh - 80px);
+    /* A posição da seção é definida abaixo da primeira seção */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.formularios_cadastro_e_login{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-cadastro {
+    display: flex;
+    float:right;
+    width: 50%;
+    justify-items: center;
+}
+
+.formulario-login {
+    display: flex;
+    float:left;
+    width: 50%;
+    justify-items: center;
+}

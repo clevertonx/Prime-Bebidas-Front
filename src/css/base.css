@@ -8,7 +8,7 @@
 @import url(components/section-categorias.css);
 @import url(components/card-grande.css);
 @import url(components/section-sobre.css);
-
+@import url(components/login.css);
 
 :root {
   --amarelo-queimado: #a87818;
