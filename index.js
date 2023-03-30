@@ -7,11 +7,10 @@ window.addEventListener("scroll", function () {
   }
 });
 
-function menuShow() {
-  let menuMobile = document.querySelector('.menuMobile');
-  if (menuMobile.classList.contains('open')) {
-    menuMobile.classList.remove('open');
-  } else {
-    menuMobile.classList.add('open')
-  }
-}
+const button = document.querySelector('.icon-menu-mobile button');
+const menuMobile = document.querySelector('.menuMobile');
+
+button.addEventListener('click', function() {
+  menuMobile.classList.toggle('show');
+});
+

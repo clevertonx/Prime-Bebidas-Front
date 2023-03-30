@@ -119,6 +119,7 @@
         flex-direction: column;
         text-align: center;
         padding-bottom: 1rem;
+        background-color: var(--amarelo-queimado);
     }
 
     .menuMobile .nav li {
@@ -127,6 +128,10 @@
     }
 
     .open {
+        display: block;
+    }
+
+    .menuMobile.show {
         display: block;
     }
 

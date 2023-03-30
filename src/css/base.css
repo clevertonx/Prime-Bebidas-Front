@@ -8,7 +8,7 @@
 @import url(components/section-categorias.css);
 @import url(components/card-grande.css);
 @import url(components/section-sobre.css);
-@import url(components/login.css);
+@import url(components/section-cadastro_login.css);
 
 :root {
   --amarelo-queimado: #a87818;
@@ -17,7 +17,6 @@
 
 * {
   font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
 }
 
 body {
