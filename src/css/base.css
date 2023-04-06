@@ -10,6 +10,7 @@
 @import url(components/section-sobre.css);
 @import url(components/section-cadastro_login.css);
 @import url(components/rodape.css);
+@import url(components/rodape-login.css);
 
 :root {
   --amarelo-queimado: #a87818;
