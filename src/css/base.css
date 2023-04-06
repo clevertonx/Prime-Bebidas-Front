@@ -9,10 +9,13 @@
 @import url(components/card-grande.css);
 @import url(components/section-sobre.css);
 @import url(components/section-cadastro_login.css);
+@import url(components/rodape.css);
 
 :root {
   --amarelo-queimado: #a87818;
   --cinza-fundo: #f9f9f9;
+  --cor-marrom: #532F23;
+  --cor-vermelho: #742520;
 }
 
 * {

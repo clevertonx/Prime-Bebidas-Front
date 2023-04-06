@@ -7,6 +7,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+#login-section {
+    position: relative;
+    top: calc(7vh - 80px);
+    /* A posição da seção é definida abaixo da primeira seção */
+    justify-content: center;
+}
+
 a {
     text-decoration: none;
 }
@@ -26,7 +33,7 @@ a.links {
 /* formatando o cabeçalho dos formulários */
 h5 {
     font-size: 48px;
-    color: var(--amarelo-queimado);
+    color: var(--cor-marrom);
     padding: 10px 0;
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -94,7 +101,7 @@ input:not([type="checkbox"]) {
 input[type="submit"] {
     width: 100% !important;
     cursor: pointer;
-    background: var(--amarelo-queimado);
+    background: var(--cor-marrom);
     padding: 8px 5px;
     color: #fff;
     font-size: 20px;
@@ -115,7 +122,7 @@ input[type="submit"]:hover {
 /*marcando os links para mudar de um formulário para outro */
 .link {
     position: absolute;
-    background: var(--amarelo-queimado);
+    background: var(--cor-marrom);
     color: white;
     left: 0px;
     height: 30px;
@@ -133,9 +140,9 @@ input[type="submit"]:hover {
     font-weight: bold;
     background: #f7f8f1;
     padding: 6px;
-    color: var(--amarelo-queimado);
+    color: var(--cor-vermelho);
     margin: 1px;
-    border: 1px solid var(--amarelo-queimado);
+    border: 1px solid var(--cor-marrom);
 
     -webkit-border-radius: 4px;
     border-radius: 4px;
