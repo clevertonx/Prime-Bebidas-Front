@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- MUDAR O NOME DA PÁGINA -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <title>Página Inicial - Prime Bebidas</title>
+</head>
+<header class="cabecalho">
+    <nav class="nav-bar">
+        <div class="cabecalho-logo">
+            <h1><img src="./src/imgs/drinklogo.svg"> Prime Bebidas</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#section-home">Home</a></li>
+                <li>
+                    <a href="FAZER">Meus produtos</a>
+                    <ul>
+                        <li><a href="#">Adicionar</a></li>
+                        <li><a href="#">Editar</a></li>
+                        <li><a href="#">Excluir</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="FAZER">Meus estabelecimentos (?)</a>
+                    <ul>
+                        <li><a href="#">Adicionar</a></li>
+                        <li><a href="#">Editar</a></li>
+                        <li><a href="#">Excluir</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#section-meu-perfil">Minhas informações</a>
+                    <ul>
+                        <li><a href="#">Editar</a></li>
+                        <li><a href="#">Excluir (?)</a></li>
+                    </ul>
+                </li>
+                <li><a href="./login.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="icon-menu-mobile">
+            <button onclick="menuShow"><img class="icon" src="./src/imgs/menu_white_36dp.svg"></button>
+        </div>
+    </nav>
+    <div class="menuMobile">
+        <ul>
+            <li><a href="#section-home">Home</a></li>
+            <li><a href="#section-mais-procurados">Mais Procurados</a></li>
+            <li>
+                <a href="#section-categorias">Categoria</a>
+                <ul>
+                    <li><a href="#">Fermentada</a></li>
+                    <li><a href="#">Fortificada</a></li>
+                    <li><a href="#">Destilada</a></li>
+                    <li><a href="#">Licores</a></li>
+                    <li><a href="#">Bitter</a></li>
+                </ul>
+            </li>
+            <li><a href="#section-sobre">Sobre</a></li>
+            <li><a href="#section-login">Login</a></li>
+        </ul>
+    </div>
+</header>
+
+<body>
+    <section id="section-home">
+        <div class="conteudo-home">
+            <h2>Compare, economize!
+            </h2>
+            <p>Encontre sua bebida mais próxima, e mais barata</p>
+        </div>
+    </section>
+
+    <section id="section-mais-procurados">
+        <div>
+            <div class="titulo-section">
+                <h3>Mais Procurados</h3>
+            </div>
+
+            <div class="engloba-cards">
+                <div class="linha-1">
+                    <div class="card">
+                        <img src="./" alt="Product 1">
+                        <h4>Product 1</h4>
+                        <p class="preco">$19.99</p>
+                        <p class="descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/card2.jpg" alt="Product 2">
+                        <h4>Product 2</h4>
+                        <p class="preco">$29.99</p>
+                        <p class="descricao">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/ca.jpg" alt="Product 3">
+                        <h4>Product 3</h4>
+                        <p class="preco">$39.99</p>
+                        <p class="descricao">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/car.png" alt="Product 3">
+                        <h4>Product 3</h4>
+                        <p class="preco">$39.99</p>
+                        <p class="descricao">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="linha-2">
+                    <div class="card">
+                        <img src="./imgs/card3.jpg" alt="Product 4">
+                        <h4>Product 4</h4>
+                        <p class="preco">$49.99</p>
+                        <p class="descricao">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore
+                            eu
+                            fugiat nulla pariatur.</p>
+                    </div>
+                    <div class="card">
+                        <img src="product6.jpg" alt="Product 5">
+                        <h4>Product 5</h4>
+                        <p class="preco">$59.99</p>
+                        <p class="descricao">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="card">
+                        <img src="product7.jpg" alt="Product 6">
+                        <h4>Product 6</h4>
+                        <p class="preco">$69.99</p>
+                        <p class="descricao">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                            sed
+                            quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                    <div class="card">
+                        <img src="product7.jpg" alt="Product 6">
+                        <h4>Product 6</h4>
+                        <p class="preco">$69.99</p>
+                        <p class="descricao">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                            sed
+                            quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="section-categorias">
+        <div>
+            <div class="titulo-section">
+                <h3>Categorias</h3>
+            </div>
+            <nav class="nav-categorias">
+                <ul>
+                    <li><a href="#">Fermentada</a></li>
+                    <li><a href="#">Fortificada</a></li>
+                    <li><a href="#">Destilada</a></li>
+                    <li><a href="#">Licores</a></li>
+                    <li><a href="#">Bitter</a></li>
+                </ul>
+            </nav>
+            <div class="card-grande">
+                <img src="./src/imgs/card2.jpg" alt="Product 6">
+                <h4>Heineken</h4>
+                <p class="preco">$69.99</p>
+                <p class="descricao">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed
+                    quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+            <div class="card-grande">
+                <img src="./src/imgs/card2.jpg" alt="Product 6">
+                <h4>Heineken</h4>
+                <p class="preco">$69.99</p>
+                <p class="descricao">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed
+                    quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+            <div class="card-grande">
+                <img src="./src/imgs/7C8A9DF01EB50B8BD5A719934902CF6C3DD5_3.png" alt="Product 6">
+                <h4>Picanha com cervejinha</h4>
+                <p class="preco">$69.99</p>
+                <p class="descricao">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed
+                    quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section id="section-sobre">
+        <div>
+            <div>
+                <h3 class="titulo-section">Sobre</h3>
+            </div>
+
+            <div class="imagem-sobreposto">
+
+                <img src="./src/imgs/sobre.webp" alt="Imagem de bebidas alcoólicas">
+
+                <div class="texto-sobreposto">
+                    <p>Bem-vindo ao nosso site, onde você pode encontrar as bebidas alcoólicas mais baratas em sua
+                        região!
+                        Sabemos que encontrar boas
+                        ofertas pode ser uma tarefa difícil, mas estamos aqui para ajudá-lo.</p>
+                    <p>Em nosso site, você pode pesquisar
+                        e comparar preços de diferentes bebidas alcoólicas em bares, restaurantes e lojas próximos a sua
+                        localização. Isso significa que você pode economizar dinheiro em suas bebidas favoritas sem
+                        precisar
+                        percorrer a cidade em busca das melhores ofertas.</p>
+                    <p>No entanto, é importante lembrar que o consumo de bebidas alcoólicas deve ser feito de forma
+                        responsável.
+                        Sempre beba com moderação e sempre com um motorista designado, se você estiver dirigindo. Esteja
+                        ciente
+                        das leis e regulamentos locais em relação ao consumo de bebidas alcoólicas e siga sempre as
+                        orientações
+                        dos profissionais de saúde.</p>
+                    <p>Estamos comprometidos em fornecer informações precisas e atualizadas em nosso site, ajudando-o a
+                        encontrar as melhores ofertas de bebidas alcoólicas e a aproveitar seus momentos de lazer de
+                        maneira
+                        responsável. Obrigado por usar nosso site e esperamos que você aproveite ao máximo as
+                        informações
+                        que
+                        oferecemos!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+<footer id="rodape">
+    <div>
+        <h6>Prime Bebidas</h6>
+        <p>Copyright © 2023 All rights reserved</p>
+    </div>
+</footer>
+
+</html>
