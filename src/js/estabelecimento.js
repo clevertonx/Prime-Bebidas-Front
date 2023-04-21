@@ -5,7 +5,7 @@ form.addEventListener('submit', (event) => {
 
     const formData = new FormData(form)
 
-    axios.post('http://localhost:8080/usuario/estabelecimento', {
+    axios.post('http://localhost:8080/estabelecimento', {
         nome: formData.get('nome'),
         telefone: formData.get('telefone'),
         horarioAtendimento: formData.get('horarioAtendimento'),
