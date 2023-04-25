@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Cadastro de Produtos - Prime Bebidas</title>
+</head>
+<header class="cabecalho">
+    <nav class="nav-bar">
+        <div class="cabecalho-logo">
+            <h1><img src="./src/imgs/drinklogo.svg"> Prime Bebidas</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./logado.html#section-home">Home</a></li>
+                <li>
+                    <a href="./produtos.html">Meus Produtos</a>
+                </li>
+                <li>
+                    <a href="./estabelecimentos.html">Meus Estabelecimentos</a>
+                </li>
+                <li>
+                    <a href="#">Minhas Informações</a>
+                </li>
+                <li><a href="./login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div>
+        <div class="titulo-section">
+            <h3>Cadastro de Produtos</h3>
+        </div>
+
+
+        <form id="form-produtos" method="post" action="http://localhost:8080/produto" enctype="multipart/form-data" class="formulario-produto">
+            <label for="nome">Nome do produto:</label>
+            <input type="text" name="nome" id="nome" required autofocus>
+
+            <label for="descricao">Descrição:</label>
+            <input type="text" name="descricao" id="descricao" required>
+
+            <label for="marca">Marca:</label>
+            <input type="text" name="marca" id="marca" required>
+
+            <label for="preco">Preço:</label>
+            <input type="text" name="preco" id="preco" required>
+
+            <label>Imagem:</label>
+            <input type="file" name="imagem_produto" id="imagem_produto" required>
+           
+            <label for="categoria">Selecione a Categoria:</label>
+            <select id="categoria" name="categoria">
+                <option value="Fermentada">Fermentada</option>
+                <option value="Fortificada">Fortificada</option>
+                <option value="Destilada">Destilada</option>
+                <option value="Licores">Licores</option>
+                <option value="Bitter">Bitter</option>
+            </select>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+
+</body>

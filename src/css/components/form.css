@@ -1,0 +1,25 @@
+/* Formulário para cadastro do ESTABELECIMENTO */
+.formulario-estabelecimento {
+    display: grid;
+    margin-right: 25%;
+    margin-left: 25%;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.formulario-estabelecimento label {
+    text-align: center;
+}
+
+.formulario-estabelecimento input {
+    border-radius: 10px;
+}
+
+input[type=text]:focus {
+    background-color: var(--cinza-fundo);
+
+}
+
+
+/* Formulário para cadastro do PRODUTO */
+.formulario-produto {}

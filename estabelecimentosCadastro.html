@@ -36,14 +36,16 @@
 </header>
 
 <body>
+
     <div>
         <div class="titulo-section">
             <h3>Cadastro de Estabelecimento</h3>
         </div>
 
-        <form id="form-estabelecimento"  method="post" action="http://localhost:8080/estabelecimento">
+        <form id="form-estabelecimento" method="post" action="http://localhost:8080/estabelecimento"
+            class="formulario-estabelecimento">
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" required>
+            <input type="text" name="nome" id="nome" required autofocus>
 
             <label for="telefone">Telefone:</label>
             <input type="text" name="telefone" id="telefone" required>
