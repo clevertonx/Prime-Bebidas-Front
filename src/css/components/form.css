@@ -1,14 +1,15 @@
 /* Formulário para cadastro do ESTABELECIMENTO */
 .formulario-estabelecimento {
-    display: grid;
-    margin-right: 25%;
-    margin-left: 25%;
-    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 40%;
     justify-content: center;
 }
 
 .formulario-estabelecimento label {
     text-align: center;
+    margin-top: 15px;
 }
 
 .formulario-estabelecimento input {
