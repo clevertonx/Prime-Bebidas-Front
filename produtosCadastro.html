@@ -41,8 +41,8 @@
             <h3>Cadastro de Produtos</h3>
         </div>
 
-
-        <form id="form-produtos" method="post" action="http://localhost:8080/produto" enctype="multipart/form-data" class="formulario-produto">
+        <form id="form-produtos" method="post" action="http://localhost:8080/produto" enctype="multipart/form-data"
+            class="formulario-produto">
             <label for="nome">Nome do produto:</label>
             <input type="text" name="nome" id="nome" required autofocus>
 
@@ -55,9 +55,6 @@
             <label for="preco">Preço:</label>
             <input type="text" name="preco" id="preco" required>
 
-            <label>Imagem:</label>
-            <input type="file" name="imagem_produto" id="imagem_produto" required>
-           
             <label for="categoria">Selecione a Categoria:</label>
             <select id="categoria" name="categoria">
                 <option value="Fermentada">Fermentada</option>
@@ -66,6 +63,9 @@
                 <option value="Licores">Licores</option>
                 <option value="Bitter">Bitter</option>
             </select>
+
+            <label>Imagem:</label>
+            <input type="file" name="imagem" id="imagem" required>
 
             <button type="submit">Cadastrar</button>
         </form>

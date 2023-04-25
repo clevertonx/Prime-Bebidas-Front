@@ -1,9 +1,9 @@
 /* Formulário para cadastro do ESTABELECIMENTO */
 .formulario-estabelecimento {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     margin: auto;
-    width: 40%;
+    width: 30%;
     justify-content: center;
 }
 
@@ -18,21 +18,24 @@
 
 input[type=text]:focus {
     background-color: var(--cinza-fundo);
-
+    border: 2px solid var(--cor-vermelho);
 }
 
 
 /* Formulário para cadastro do PRODUTO */
 .formulario-produto {
-    display: flex;
-    flex-wrap: wrap;
+    width: 50%;
     margin: auto;
-    width: 40%;
-    justify-content: center;
+    display:grid;
+    grid-template-rows: 40px 40px auto ;
+    grid-template-columns: 20% 20% 20% 20% 20% 20%;
+    gap: 1px;
+    justify-content: space-around;
+    text-align: end;
 }
 
 .formulario-produto label {
-    text-align: center;
+    /* text-align: end; */
     margin-top: 15px;
 }
 
@@ -42,5 +45,10 @@ input[type=text]:focus {
 
 input[type=text]:focus {
     background-color: var(--cinza-fundo);
+    border: 2px solid var(--cor-vermelho);
+}
 
+select{
+    border-radius: 5px;
+    width: 100%;
 }
