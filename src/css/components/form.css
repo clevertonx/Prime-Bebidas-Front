@@ -23,4 +23,24 @@ input[type=text]:focus {
 
 
 /* Formulário para cadastro do PRODUTO */
-.formulario-produto {}
+.formulario-produto {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 40%;
+    justify-content: center;
+}
+
+.formulario-produto label {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.formulario-produto input {
+    border-radius: 10px;
+}
+
+input[type=text]:focus {
+    background-color: var(--cinza-fundo);
+
+}
