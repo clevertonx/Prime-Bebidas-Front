@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
     <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./src/js/editarPerfil.js" defer></script>
+    <script src="./src/js/usuario.js" defer></script>
     <title>Perfil - Prime Bebidas</title>
 </head>
 <header class="cabecalho">
@@ -42,7 +42,7 @@
             <h3>Minhas Informações</h3>
         </div>
 
-        <form id="form-editar-perfil" method="put" action="" class="formulario-editar-perfil">
+        <form id="form-editar-perfil" method="put" action="http://localhost:8080/usuario/{id}" class="formulario-editar-perfil">
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>
 
