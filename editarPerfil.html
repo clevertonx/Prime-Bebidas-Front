@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
-    <title>Meus Estabelecimentos - Prime Bebidas</title>
+    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./src/js/editarPerfil.js" defer></script>
+    <title>Perfil - Prime Bebidas</title>
 </head>
 <header class="cabecalho">
     <nav class="nav-bar">
@@ -34,27 +36,23 @@
 </header>
 
 <body>
+
     <div>
         <div class="titulo-section">
-            <h3>Meus Estabelecimentos</h3>
+            <h3>Minhas Informações</h3>
         </div>
-        <nav class="nav-categorias">
-            <!-- ARRUMAR NOME DAS CLASSES -->
-            <ul>
-                <li><a href="estabelecimentosCadastro.html">Adicionar</a></li>
-            </ul>
-        </nav>
+
+        <form id="form-editar-perfil" method="put" action="" class="formulario-editar-perfil">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Salvar</button>
+        </form>
+        
     </div>
 
 
 </body>
-
-<!-- <footer id="rodape">
-    <div>
-        <h6>Prime Bebidas</h6>
-        <p>Copyright © 2023 All rights reserved</p>
-    </div>
-</footer> -->
-
-
-</html>

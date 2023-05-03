@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
         .then(response => {
           console.log(response.data);
+          document.cookie = 'idUsuario=' + response.data.id;
           window.location.href = 'logado.html';
         })
         .catch(error => {
@@ -24,3 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
   });
+
+  document.getElementById ("logout").addEventListener(()=>{
+    document.cookie = 'idUsuario=';  
+  })
