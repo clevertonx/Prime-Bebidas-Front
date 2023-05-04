@@ -13,17 +13,16 @@ export function usuarioLogado() {
     // Obtém todos os cookies do documento
     var cookies = document.cookie;
 
-    let uidUsuarioLogado;
+    let idUsuario;
     cookies.split('; ').forEach(function (cookie) {
         let [nome, valor] = cookie.split('=');
         if (nome=="idUsuario"){
-            uidUsuarioLogado = valor;
+            idUsuario = valor;
         }
     })
 
-    return uidUsuarioLogado;
+    return idUsuario;
 }
-
 
 export async function obterUsuarioLogado(){
     return await obterUsuario(usuarioLogado());
