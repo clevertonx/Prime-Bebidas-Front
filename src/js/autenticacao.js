@@ -1,17 +1,12 @@
 // MinhaCritica/src/js/usuarioAutentificacao.js 
 
-export function criarCookie(userCredential) {
-    let dataExpiracao = new Date();
-    dataExpiracao.setDate(dataExpiracao.getDate() + 5);
-    
-    document.cookie = "usuarioToken=" + userCredential.user.accessToken + "; expires=" + dataExpiracao;
-    document.cookie = "usuarioUid=" + userCredential.user.uid + "; expires=" + dataExpiracao;
+export function criarCookie(idUsuario) {
+    document.cookie = "idUsuario=" + idUsuario;
 }
 
 //Apaga cookie quando o usuario desloga, setando a data de expiração para uma data passada
 export function resetarCookie() {
-    document.cookie = "usuarioToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "usuarioUid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    document.cookie = "idUsuario=;";
 }
 
 export function usuarioLogado() {
@@ -21,7 +16,7 @@ export function usuarioLogado() {
     let uidUsuarioLogado;
     cookies.split('; ').forEach(function (cookie) {
         let [nome, valor] = cookie.split('=');
-        if (nome=="usuarioUid"){
+        if (nome=="idUsuario"){
             uidUsuarioLogado = valor;
         }
     })

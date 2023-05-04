@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
     <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./src/js/usuario.js" defer></script>
-    <script src="./src/js/autenticacao.js" defer></script>
+    <script type="module" src="./src/js/usuario.js" defer></script>
+    
     <title>Login - Prime Bebidas</title>
 </head>
 <header class="cabecalho">
@@ -73,7 +73,7 @@
         <div class="content">
             <!--FORMULÁRIO DE LOGIN-->
             <div id="login">
-                <form method="post" action="http://localhost:8080/usuario">
+                <form method="post" action="http://localhost:8080/usuario/login">
                     <h5>Login</h5>
                     <p>
                         <label for="email_login">Seu e-mail</label>
@@ -88,7 +88,7 @@
                     </p>
 
                     <p>
-                        <input type="submit" value="Logar" />
+                        <button id="botao-logar" type="submit">Logar</button>
                     </p>
 
                     <p class="link">
