@@ -1,3 +1,5 @@
+// import { criarCookie } from './autenticacao'
+
 // Cadastro
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('form');
@@ -17,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
       .then(response => {
-        console.log(response.data);
+        // console.log(response.data);
         document.cookie = 'idUsuario=' + response.data.id;
         window.location.href = 'logado.html';
       })

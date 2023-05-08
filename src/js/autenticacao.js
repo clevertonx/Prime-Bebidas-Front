@@ -24,6 +24,7 @@ export async function obterUsuarioLogado(){
     return await obterUsuario(usuarioLogado());
 }
 
+
 document.getElementById("logout").addEventListener(() => {
   document.cookie = 'idUsuario=';
 })
