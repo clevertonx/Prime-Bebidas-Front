@@ -1,53 +1,69 @@
-function getCookieValue(cookieName) {
-    const name = cookieName + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieArray = decodedCookie.split(';');
 
-    for (let i = 0; i < cookieArray.length; i++) {
-        let cookie = cookieArray[i];
-        while (cookie.charAt(0) === ' ') {
-            cookie = cookie.substring(1);
-        }
-        if (cookie.indexOf(name) === 0) {
-            return cookie.substring(name.length, cookie.length);
+const botaoSubmit = document.getElementById('botao-estabelecimento');
+
+// Função para obter o valor do cookie pelo nome
+function valorCookie(idUsuario) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith(idUsuario + '=')) {
+            return cookie.substring(idUsuario.length + 1);
         }
     }
-    return "";
+    return null;
 }
 
-const idUsuario = getCookieValue("idUsuario");
+// Função para cadastrar um estabelecimento
+function cadastrarEstabelecimento() {
+    const idUsuario = valorCookie('idUsuario'); // Obtém o ID do usuário dos cookies
 
+    // Dados do formulário
+    const nome = document.getElementById('nome').value;
+    const telefone = document.getElementById('telefone').value;
+    const horarioAtendimento = document.getElementById('horarioAtendimento').value;
+    const numero = document.getElementById('numero').value;
+    const cidade = document.getElementById('cidade').value;
+    const logradouro = document.getElementById('logradouro').value;
+    const estado = document.getElementById('estado').value;
+    const cnpj = document.getElementById('cnpj').value;
 
+    // Objeto de dados do estabelecimento
+    const estabelecimentoData = {
+        nome,
+        telefone,
+        horarioAtendimento,
+        numero,
+        cidade,
+        logradouro,
+        estado,
+        cnpj,
+        idUsuario: idUsuario
 
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    const novoEstabelecimento = {
-        nomeInput : document.getElementById('nome'),
-        telefoneInput : document.getElementById('telefone'),        horarioAtendimentoInput : document.getElementById('horarioAtendimento'),
-        numeroInput : document.getElementById('numero'),
-        cidadeInput : document.getElementById('cidade'),
-        logradouroInput : document.getElementById('logradouro'),
-        estadoInput : document.getElementById('estado'),
-        cnpjInput : document.getElementById('cnpj'),
-        botaoCadastro : document.getElementById('botao-estabelecimento')
     };
 
-    axios.post('http://localhost:8080/estabelecimento', novoEstabelecimento, {
-        params: {
-            id_usuario: idUsuario
+    // Faz a requisição POST para cadastrar o estabelecimento
+    axios.post('http://localhost:8080/estabelecimento', estabelecimentoData, {
+        headers: {
+            'Content-Type': 'application/json'
         }
     })
-        .then(response => {
-            console.log('Estabelecimento criado com sucesso!');
+        .then((response) => {
+            // Manipula a resposta da requisição
+            // console.log(response.data);
             window.location.href = 'estabelecimentos.html';
+            // Redireciona ou executa outras ações após o cadastro
+            console.log(response);
+
         })
-        .catch(error => {
-            console.error('Erro ao criar estabelecimento:', error);
+        .catch((error) => {
+            // Manipula erros da requisição
+            console.log(error);
         });
-});
-
-
-    // Chamar a função para criar o estabelecimento
-    criarEstabelecimento(userId, estabelecimentoData);
+}
+document.addEventListener('DOMContentLoaded', function () {
+    // Adiciona um ouvinte de evento para o formulário de cadastro
+    botaoSubmit.addEventListener('click', (event) => {
+        event.preventDefault(); // Previne o envio padrão do formulário
+        cadastrarEstabelecimento(); // Chama a função para cadastrar o estabelecimento
+    });
 });

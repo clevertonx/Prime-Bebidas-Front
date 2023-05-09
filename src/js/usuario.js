@@ -2,7 +2,6 @@
 
 // Cadastro
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('form');
   const emailInput = document.getElementById('email_cad');
   const senhaInput = document.getElementById('senha_cad');
   const botaoSubmit = document.getElementById('botao-cad');
