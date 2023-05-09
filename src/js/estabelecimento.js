@@ -1,66 +1,52 @@
-function obterCookie(name) {
-    const cookies = document.cookie.split("; ");
-    for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].split("=");
-        if (cookie[0] === name) {
-            return cookie[1];
+function getCookieValue(cookieName) {
+    const name = cookieName + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+
+    for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i];
+        while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name) === 0) {
+            return cookie.substring(name.length, cookie.length);
         }
     }
-    return null;
+    return "";
 }
 
-const userId = obterCookie("userId");
+const idUsuario = getCookieValue("idUsuario");
 
 
-// Função para criar um estabelecimento
-async function criarEstabelecimento(userId, estabelecimentoData) {
-    try {
-        // Realizar uma requisição POST para o backend
-        const response = await axios.post("http://localhost:8080/estabelecimento", {
-            usuario: userId,
-            ...estabelecimentoData
-        });
-
-        // Verificar a resposta do servidor
-        if (response.status === 200) {
-            console.log("Estabelecimento criado com sucesso!");
-            // Realizar outras ações, se necessário
-        }
-    } catch (error) {
-        console.error("Erro ao criar estabelecimento:", error);
-    }
-}
 
 
-// Obter o formulário
-const formEstabelecimento = document.getElementById("form-estabelecimento");
+document.addEventListener('DOMContentLoaded', function () {
 
-// Lidar com o envio do formulário
-formEstabelecimento.addEventListener("submit", function (event) {
-    event.preventDefault(); // Impedir o envio padrão do formulário
-
-    // Obter os valores dos campos do formulário
-    const nomeEstabelecimento = document.getElementById("nome").value;
-    const telefone = document.getElementById("telefone").value;
-    const horarioAtendimento = document.getElementById("horarioAtendimento").value;
-    const numero = document.getElementById("numero").value;
-    const cidade = document.getElementById("cidade").value;
-    const logradouro = document.getElementById("logradouro").value;
-    const estado = document.getElementById("estado").value;
-    const cnpj = document.getElementById("cnpj").value;
-
-    // Criar objeto com os dados do estabelecimento
-    const estabelecimentoData = {
-        nome: nomeEstabelecimento,
-        telefone: telefone,
-        horarioAtendimento: horarioAtendimento,
-        numero: numero,
-        cidade: cidade,
-        logradouro: logradouro,
-        estado: estado,
-        cnpj: cnpj,
-        usuario: idUsuario
+    const novoEstabelecimento = {
+        nomeInput : document.getElementById('nome'),
+        telefoneInput : document.getElementById('telefone'),        horarioAtendimentoInput : document.getElementById('horarioAtendimento'),
+        numeroInput : document.getElementById('numero'),
+        cidadeInput : document.getElementById('cidade'),
+        logradouroInput : document.getElementById('logradouro'),
+        estadoInput : document.getElementById('estado'),
+        cnpjInput : document.getElementById('cnpj'),
+        botaoCadastro : document.getElementById('botao-estabelecimento')
     };
+
+    axios.post('http://localhost:8080/estabelecimento', novoEstabelecimento, {
+        params: {
+            id_usuario: idUsuario
+        }
+    })
+        .then(response => {
+            console.log('Estabelecimento criado com sucesso!');
+            window.location.href = 'estabelecimentos.html';
+        })
+        .catch(error => {
+            console.error('Erro ao criar estabelecimento:', error);
+        });
+});
+
 
     // Chamar a função para criar o estabelecimento
     criarEstabelecimento(userId, estabelecimentoData);
