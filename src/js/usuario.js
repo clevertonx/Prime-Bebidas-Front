@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
       .then(response => {
         console.log(response.data);
-        window.location.href = 'logado.html';
+        window.location.href = 'login.html#paralogin';
       })
       .catch(error => {
         console.error(error);
