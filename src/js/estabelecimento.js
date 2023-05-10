@@ -54,7 +54,7 @@ function cadastrarEstabelecimento() {
             document.cookie = 'idEstabelecimento=' + response.data.id;
         })
         .catch((error) => {
-            // Manipula erros da requisição
+            // Erros da requisição (fazer)
             console.log(error);
         });
 }
