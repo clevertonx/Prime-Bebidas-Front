@@ -53,7 +53,7 @@ function cadastrarEstabelecimento() {
             // Gera Cookie para o Estabelecimento cadastrado
             document.cookie = 'idEstabelecimento=' + response.data.id;
             // Aviso o usuário que o estabelecimento foi criado 
-            alert("O estabelecimento foi criado com sucesso");
+            alert("O estabelecimento " + "'" + response.data.nome + "'" + "foi criado com sucesso");
 
         })
         .catch((error) => {
