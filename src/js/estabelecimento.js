@@ -1,7 +1,6 @@
-
 const botaoSubmit = document.getElementById('botao-estabelecimento');
 
-// Função para obter o valor do cookie pelo nome
+// Função para obter o valor do cookie do Id do Usuário
 function valorCookie(idUsuario) {
     const cookies = document.cookie.split(';');
     for (let i = 0; i < cookies.length; i++) {
@@ -13,7 +12,7 @@ function valorCookie(idUsuario) {
     return null;
 }
 
-// Função para cadastrar um estabelecimento
+// Função para cadastrar um estabelecimento, com vinculo do Usuário 
 function cadastrarEstabelecimento() {
     const idUsuario = valorCookie('idUsuario'); // Obtém o ID do usuário dos cookies
 
@@ -27,7 +26,7 @@ function cadastrarEstabelecimento() {
     const estado = document.getElementById('estado').value;
     const cnpj = document.getElementById('cnpj').value;
 
-    // Objeto de dados do estabelecimento
+    // Objeto do estabelecimento
     const estabelecimentoData = {
         nome,
         telefone,
@@ -38,7 +37,6 @@ function cadastrarEstabelecimento() {
         estado,
         cnpj,
         idUsuario: idUsuario
-
     };
 
     // Faz a requisição POST para cadastrar o estabelecimento
@@ -48,12 +46,12 @@ function cadastrarEstabelecimento() {
         }
     })
         .then((response) => {
-            // Manipula a resposta da requisição
-            // console.log(response.data);
-            window.location.href = 'estabelecimentos.html';
             // Redireciona ou executa outras ações após o cadastro
+            window.location.href = 'estabelecimentos.html';
+            // Demonstra o id do usuário
             console.log(response);
-
+            // Gera Cookie para o Estabelecimento cadastrado
+            document.cookie = 'idEstabelecimento=' + response.data.id;
         })
         .catch((error) => {
             // Manipula erros da requisição
@@ -61,9 +59,8 @@ function cadastrarEstabelecimento() {
         });
 }
 document.addEventListener('DOMContentLoaded', function () {
-    // Adiciona um ouvinte de evento para o formulário de cadastro
     botaoSubmit.addEventListener('click', (event) => {
         event.preventDefault(); // Previne o envio padrão do formulário
-        cadastrarEstabelecimento(); // Chama a função para cadastrar o estabelecimento
+        cadastrarEstabelecimento(); // Chama a função para cadastro do estabelecimento
     });
 });
