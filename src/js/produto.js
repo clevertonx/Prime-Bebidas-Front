@@ -49,7 +49,7 @@ function cadastrarProduto() {
             // Gera Cookie para o Estabelecimento cadastrado
             document.cookie = 'idProduto=' + response.data.id;
             // Aviso o usuário que o produto, vinculado ao estabelecimento específico foi criado 
-            alert("O Produto " + response.data.nome + " foi cadastrado no estabelecimento " + response.data.idEstabelecimento + " com sucesso");
+            alert("O Produto " + response.data.nome + " foi cadastrado no estabelecimento " + idEstabelecimento + " com sucesso");
         })
         .catch((error) => {
             // Erros da requisição (fazer)
@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
         cadastrarProduto(); // Chama a função para cadastro do estabelecimento
     });
 });
+
+document.getElementById("logout").addEventListener(() => {
+    document.cookie = 'idUsuario=';
+})
 
 
 

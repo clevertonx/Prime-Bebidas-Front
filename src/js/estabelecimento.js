@@ -48,13 +48,18 @@ function cadastrarEstabelecimento() {
         .then((response) => {
             // Redireciona ou executa outras ações após o cadastro
             window.location.href = 'estabelecimentos.html';
-            // Demonstra o id do usuário
-            console.log(response);
+            console.log(response.data.id);
+            if (response.data && response.data.id) {
+                // O servidor retornou uma resposta válida com a propriedade data.id
+                // Prossiga com a configuração do cookie
+                document.cookie = 'idEstabelecimento=' + response.data.id;
+                alert("O estabelecimento " + response.data.nome + " foi criado com sucesso");
+            } else {
+                // A resposta do servidor não contém a propriedade data.id
+                console.log("Resposta inválida do servidor após o cadastro do estabelecimento");
+            }
             // Gera Cookie para o Estabelecimento cadastrado
             document.cookie = 'idEstabelecimento=' + response.data.id;
-            // Aviso o usuário que o estabelecimento foi criado 
-            alert("O estabelecimento " + "'" + response.data.nome + "'" + "foi criado com sucesso");
-
         })
         .catch((error) => {
             // Erros da requisição (fazer)

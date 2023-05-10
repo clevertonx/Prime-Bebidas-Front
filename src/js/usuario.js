@@ -1,7 +1,6 @@
-// import { criarCookie } from './autenticacao'
-
 // Cadastro
 document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form');
   const emailInput = document.getElementById('email_cad');
   const senhaInput = document.getElementById('senha_cad');
   const botaoSubmit = document.getElementById('botao-cad');
@@ -18,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
       .then(response => {
-        // console.log(response.data);
+        console.log(response.data);
         document.cookie = 'idUsuario=' + response.data.id;
-        window.location.href = 'logado.html';
+        window.location.href = 'login.html#paralogin';
       })
       .catch(error => {
         console.error(error);
@@ -31,5 +30,3 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById("logout").addEventListener(() => {
   document.cookie = 'idUsuario=';
 })
-
-// Login
