@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
     <script src="./src/js/estabelecimento.js" defer></script>
-    
+
     <title>Meus Estabelecimentos - Prime Bebidas</title>
 </head>
 <header class="cabecalho">
@@ -41,7 +41,21 @@
             <h3>Meus Estabelecimentos</h3>
         </div>
         <nav class="nav-categorias">
-            <!-- ARRUMAR NOME DAS CLASSES -->
+
+            <table id="tabela-dinamica">
+                <thead class="tabela-cabecalho">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Logradouro</th>
+                        <th>Telefone</th>
+                        <th>CNPJ</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-body"></tbody>
+            </table>
+
+
             <ul>
                 <li><a href="estabelecimentosCadastro.html">Adicionar</a></li>
             </ul>

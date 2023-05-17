@@ -72,3 +72,43 @@ document.addEventListener('DOMContentLoaded', function () {
         cadastrarEstabelecimento(); // Chama a função para cadastro do estabelecimento
     });
 });
+
+
+// Função para obter os dados do Cadastro
+function obterDadosDaAPI() {
+    axios.get('http://localhost:8080/usuario/{idUsuario}/estabelecimento')
+        .then(function (response) {
+            // Dados obtidos com sucesso
+            var dados = response.data;
+            popularTabela(dados);
+        })
+        .catch(function (error) {
+            // Ocorreu um erro ao obter os dados da API
+            console.log(error);
+        });
+}
+
+// Função para preenchimento dinâmico da tabela
+function popularTabela(dados) {
+    var tabelaBody = document.getElementById('tabela-body');
+
+    // Limpa o conteúdo atual da tabela
+    tabelaBody.innerHTML = '';
+
+    // Percorre os dados e cria as linhas da tabela
+    for (var i = 0; i < dados.length; i++) {
+        var linha = document.createElement('tr');
+        linha.innerHTML = '<td>' + dados[i].id + '</td>' +
+            '<td>' + dados[i].id + '</td>' +
+            '<td>' + dados[i].nome + '</td>' +
+            '<td>' + dados[i].logradouro + '</td>' +
+            '<td>' + dados[i].telefone + '</td>' +
+            '<td>' + dados[i].cnpj + '</td>';
+
+        tabelaBody.appendChild(linha);
+    }
+}
+
+window.onload = function () {
+    obterDadosDaAPI();
+};
