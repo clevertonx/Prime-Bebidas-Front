@@ -92,4 +92,6 @@ document.getElementById("logout").addEventListener(() => {
 // }
 
 
-
+document.getElementById("logout").addEventListener.addEventListener('click', () => {
+    document.cookie = 'idUsuario=';
+});

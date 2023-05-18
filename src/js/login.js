@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     botaoSubmit.addEventListener('click', function (event) {
         event.preventDefault();
-
         const email = emailInput.value;
         const senha = senhaInput.value;
 
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
             .then(response => {
                 console.log(response.data);
-                window.localStorage.setItem('idUsuario', response.data.id);
+                document.cookie = 'idUsuario=' + response.data;
                 window.location.href = 'logado.html';
             })
             .catch(error => {
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.getElementById("logout").addEventListener(() => {
+document.getElementById("logout").addEventListener.addEventListener('click', () => {
     document.cookie = 'idUsuario=';
-})
-
+});

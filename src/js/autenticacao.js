@@ -12,7 +12,7 @@ export function usuarioLogado() {
     let idUsuario;
     cookies.split(';').forEach(function (cookie) {
         let [nome, valor] = cookie.split('=');
-        if (nome=="idUsuario"){
+        if (nome == "idUsuario") {
             idUsuario = valor;
         }
     })
@@ -20,11 +20,11 @@ export function usuarioLogado() {
     return idUsuario;
 }
 
-export async function obterUsuarioLogado(){
+export async function obterUsuarioLogado() {
     return await obterUsuario(usuarioLogado());
 }
 
 
-document.getElementById("logout").addEventListener(() => {
-  document.cookie = 'idUsuario=';
-})
+document.getElementById("logout").addEventListener.addEventListener('click', () => {
+    document.cookie = 'idUsuario=';
+});

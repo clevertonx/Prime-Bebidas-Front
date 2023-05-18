@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Função para obter os dados do Cadastro
 function obterDadosDaAPI() {
 
-    var idUsuario = valorCookie('idUsuario');
+    const idUsuario = valorCookie('idUsuario');
 
     axios.get('http://localhost:8080/usuario/' + idUsuario + '/estabelecimento', {
         headers: {
@@ -97,7 +97,7 @@ function obterDadosDaAPI() {
 
 // Função para preenchimento dinâmico da tabela
 function popularTabela(dados) {
-    var tabelaBody = document.getElementById('tabela-body');
+    const tabelaBody = document.getElementById('tabela-body');
 
     // Limpa o conteúdo atual da tabela
     tabelaBody.innerHTML = '';
@@ -119,3 +119,7 @@ function popularTabela(dados) {
 window.onload = function () {
     obterDadosDaAPI();
 };
+
+document.getElementById("logout").addEventListener.addEventListener('click', () => {
+    document.cookie = 'idUsuario=';
+});
