@@ -76,7 +76,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Função para obter os dados do Cadastro
 function obterDadosDaAPI() {
-    axios.get('http://localhost:8080/usuario/{idUsuario}/estabelecimento')
+
+    var idUsuario = valorCookie('idUsuario');
+
+    axios.get('http://localhost:8080/usuario/' + idUsuario + '/estabelecimento', {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
         .then(function (response) {
             // Dados obtidos com sucesso
             var dados = response.data;

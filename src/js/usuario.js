@@ -17,9 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
       .then(response => {
-        console.log(response.data);
-        document.cookie = 'idUsuario=' + response.data.id;
         window.location.href = 'login.html#paralogin';
+        console.log(response.data);
+        if (response.data && response.data.id) {
+          document.cookie = 'idUsuario=' + response.data.id;
+          alert("O Usuário foi criado com sucesso");
+        } else {
+          // A resposta do servidor não contém a propriedade data.id
+          console.log("Resposta inválida do servidor após o cadastro do estabelecimento");
+        }
+
+        document.cookie = 'idUsuario=' + response.data.id;
       })
       .catch(error => {
         console.error(error);
