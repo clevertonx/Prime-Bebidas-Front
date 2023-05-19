@@ -106,14 +106,23 @@ function popularTabela(dados) {
     for (var i = 0; i < dados.length; i++) {
         var linha = document.createElement('tr');
         linha.innerHTML = '<td>' + dados[i].id + '</td>' +
-            '<td>' + dados[i].id + '</td>' +
             '<td>' + dados[i].nome + '</td>' +
             '<td>' + dados[i].logradouro + '</td>' +
             '<td>' + dados[i].telefone + '</td>' +
-            '<td>' + dados[i].cnpj + '</td>';
+            '<td>' + dados[i].cnpj + '</td>' +
+            '<td><button class="editar" onclick="editarRegistro(' + dados[i].id + ')">Editar</button></td>' +
+            '<td><button class="excluir" onclick="excluirRegistro(' + dados[i].id + ')">Excluir</button></td>';
 
         tabelaBody.appendChild(linha);
     }
+}
+
+function editarRegistro() {
+// FAZER
+}
+
+function excluirRegistro() {
+    // FAZER
 }
 
 window.onload = function () {

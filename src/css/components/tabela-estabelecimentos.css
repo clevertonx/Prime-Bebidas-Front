@@ -1,14 +1,18 @@
-#tabela-dinamica { 
-    /* MELHORAR A ESTILIZAÇÃO */
-    width: 250px;
-    margin: 50px;
-    padding: 20px;
+#tabela-dinamica {
+    width: 1200px;
+    margin: 85px;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
     background-color: white;
+    border-color: (var(--amarelo-queimado));
 }
 
-.tabela-cabecalho{
+.tabela-cabecalho {
     border-color: (var(--amarelo-queimado));
+}
+
+#tabela-body td{
+    border-color: (var(--amarelo-queimado));
+    padding-top: 15px;
 }
