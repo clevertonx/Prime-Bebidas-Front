@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
-    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/js/produto.js" defer></script>
 
     <title>Cadastro de Produtos - Prime Bebidas</title>
@@ -64,6 +64,9 @@
                 <option value="Licores">Licores</option>
                 <option value="Bitter">Bitter</option>
             </select>
+
+            <label for="estabelecimentos-cadastrados">Estabelecimentos:</label>
+            <select id="estabelecimentos-cadastrados"></select>
 
             <label>Imagem:</label>
             <input type="file" name="imagem" id="imagem" required>
