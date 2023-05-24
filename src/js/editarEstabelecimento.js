@@ -73,6 +73,9 @@ function salvarAlteracoes(event) {
             // Alterações salvas com sucesso
             console.log(response.data);
             // Faça algo após salvar as alterações, como redirecionar para outra página
+            const url = `./estabelecimentos.html?id=${idEstabelecimento}&nome=${nome}&telefone=${telefone}&horarioAtendimento=${horarioAtendimento}&numero=${numero}&cidade=${cidade}&logradouro=${logradouro}&estado=${estado}&cnpj=${cnpj}`;
+            // Navegue para a página anterior com os dados atualizados
+            window.location.href = url;
         })
         .catch(function (error) {
             // Ocorreu um erro ao salvar as alterações

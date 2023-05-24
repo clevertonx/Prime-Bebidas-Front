@@ -36,7 +36,7 @@
 }
 
 #botao-estabelecimento[type="submit"]:hover {
-    background: #4ab3c6;
+    background: var(--cor-vermelho);
 }   
 
 
