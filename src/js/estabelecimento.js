@@ -117,18 +117,10 @@ function popularTabela(dados) {
     }
 }
 
-function editarRegistro() {
-// FAZER
-}
-
-function excluirRegistro() {
-    // FAZER
-}
-
 window.onload = function () {
     obterDadosDaAPI();
 };
 
-document.getElementById("logout").addEventListener.addEventListener('click', () => {
+document.getElementById("logout").addEventListener('click', () => {
     document.cookie = 'idUsuario=';
 });
