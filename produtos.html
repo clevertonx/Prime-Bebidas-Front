@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/js/produto.js" defer></script>
 
     <title>Meus Produtos - Prime Bebidas</title>
@@ -43,7 +44,24 @@
             <h3>Meus Produtos</h3>
         </div>
         <nav class="nav-categorias">
-            <!-- ARRUMAR NOME DAS CLASSES -->
+            
+            <table id="tabela-dinamica">
+                <thead class="tabela-cabecalho">
+                    <tr class="tabela-cabecalho">
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descricao</th>
+                        <th>Marca</th>
+                        <th>Preço</th>
+                        <th>Categoria</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-produto"></tbody>
+            </table>
+
+
             <ul>
                 <li><a href="produtosCadastro.html">Adicionar</a></li>
             </ul>
