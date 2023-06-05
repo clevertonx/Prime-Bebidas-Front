@@ -45,68 +45,6 @@ input[type=text]:focus {
     border: 2px solid var(--cor-vermelho);
 }
 
-/* Formulário para cadastro do PRODUTO */
-.formulario-produto {
-    display: flex;
-    flex-wrap:wrap;
-    margin: auto;
-    width: 35%;
-    justify-content: center;
-}
-
-.formulario-produto label {
-    width: 25%;
-    text-align: end;
-    margin-right: 10px;
-    margin-top: 23px;
-
-}
-
-.formulario-produto input {
-    width: 65%;
-    border-radius: 10px;
-    margin-top: 15px;
-}
-
-#preco{
-    width: 50px;
-}
-
-input[type=text]:focus {
-    background-color: var(--cinza-fundo);
-    border: 2px solid var(--cor-vermelho);
-}
-
-select{
-    width: 200px;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-
-
-.formulario-produto button {
-    width: 25% !important;
-    cursor: pointer;
-    background: var(--cor-marrom);
-    padding: 8px 5px;
-    color: #fff;
-    font-size: 20px;
-    border: 1px solid #fff;
-    margin-bottom: 10px;
-    text-shadow: 0 1px 1px #333;
-    margin-top: 10px;
-
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-
-    transition: all 0.2s linear;
-}
-
-#botao-produto[type="submit"]:hover {
-    background: #4ab3c6;
-}   
-
-
 /* Formulário para EDITAR o USUÁRIO */
 .formulario-editar-perfil {
     display: flex;
@@ -154,5 +92,5 @@ input[type=text]:focus {
 }
 
 #botao-editar-usuario[type="submit"]:hover {
-    background: #4ab3c6;
+    background:  var(--cor-marrom);
 }   

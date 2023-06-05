@@ -44,34 +44,61 @@
 
         <form id="form-produtos" method="post" action="http://localhost:8080/produto" enctype="multipart/form-data"
             class="formulario-produto">
-            <label for="nome">Nome do produto:</label>
-            <input type="text" name="nome" id="nome" required autofocus>
 
-            <label for="descricao">Descrição:</label>
-            <input type="text" name="descricao" id="descricao" required>
+            <div id="primeira-linha">
 
-            <label for="marca">Marca:</label>
-            <input type="text" name="marca" id="marca" required>
+                <div class="nome-produto">
+                    <label for="nome">Nome do produto:</label>
+                    <input type="text" name="nome" id="nome" required autofocus>
+                </div>
 
-            <label for="preco">Preço:</label>
-            <input type="text" name="preco" id="preco" required>
+                <div class="marca-produto">
+                    <label for="marca">Marca:</label>
+                    <input type="text" name="marca" id="marca" required>
+                </div>
+            </div>
 
-            <label for="categoria">Selecione a Categoria:</label>
-            <select id="categoria" name="categoria">
-                <option value="Fermentada">Fermentada</option>
-                <option value="Fortificada">Fortificada</option>
-                <option value="Destilada">Destilada</option>
-                <option value="Licores">Licores</option>
-                <option value="Bitter">Bitter</option>
-            </select>
+            <div id="segunda-linha">
+                <div class="descricao-produto">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" name="descricao" id="descricao" required>
+                </div>
+            </div>
 
-            <label for="estabelecimentos-cadastrados">Estabelecimentos:</label>
-            <select id="estabelecimentos-cadastrados"></select>
+            <div id="terceira-linha">
+                <div class="preco-produto">
+                    <label for="preco">Preço:</label>
+                    <input type="text" name="preco" id="preco" required>
+                </div>
 
-            <label>Imagem:</label>
-            <input type="file" name="imagem" id="imagem">
+                <div class="categoria-produto">
+                    <label for="categoria">Selecione a Categoria:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="Fermentada">Fermentada</option>
+                        <option value="Fortificada">Fortificada</option>
+                        <option value="Destilada">Destilada</option>
+                        <option value="Licores">Licores</option>
+                        <option value="Bitter">Bitter</option>
+                    </select>
+                </div>
+            </div>
 
-            <button id="botao-produto" type="submit">Cadastrar</button>
+            <div id="quarta-linha">
+                <div class="estabelecimentos-produto">
+                    <label for="estabelecimentos-cadastrados">Estabelecimentos:</label>
+                    <select id="estabelecimentos-cadastrados"></select>
+                </div>
+            </div>
+
+            <div id="quinta-linha">
+                <div class="imagem-do-produto">
+                    <label>Imagem:</label>
+                    <input type="file" name="imagem" id="imagem">
+                </div>
+            </div>
+            <div class="butao">
+                <button id="botao-produto" type="submit">Cadastrar</button>
+            </div>
         </form>
     </div>
 
