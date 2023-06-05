@@ -78,7 +78,7 @@ function salvarAlteracoes(event) {
 // Adicione o evento de envio do formulário à função salvarAlteracoes
 document.getElementById('form-produtos').addEventListener('submit', salvarAlteracoes);
 
-function editarRegistro(idProduto) {
+function editarProduto(idProduto) {
     window.location.href = './editarProduto.html?id=' + idProduto;
 }
 

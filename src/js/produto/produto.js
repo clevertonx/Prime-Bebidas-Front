@@ -149,8 +149,8 @@ function popularTabela(dados) {
             '<td>' + dados[i].marca + '</td>' +
             '<td>' + dados[i].preco + '</td>' +
             '<td>' + dados[i].categoria + '</td>' +
-            '<td><button class="editar" onclick="editarRegistro(' + dados[i].id + ')">Editar</button></td>' +
-            '<td><button class="excluir" onclick="excluirRegistro(' + dados[i].id + ')">Excluir</button></td>';
+            '<td><button class="editar" onclick="editarProduto(' + dados[i].id + ')">Editar</button></td>' +
+            '<td><button class="excluir" onclick="excluirProduto(' + dados[i].id + ')">Excluir</button></td>';
 
         tabelaBody.appendChild(linha);
     }
