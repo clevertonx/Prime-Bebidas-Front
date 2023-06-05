@@ -102,7 +102,22 @@ function obterDadosProduto() {
     })
         .then(function (response) {
             const dados = response.data;
-            popularTabela(dados);
+
+            const promises = dados.map(function (produto) {
+                return obterNomeEstabelecimento(produto.idEstabelecimento)
+                    .then(function (nomeEstabelecimento) {
+                        produto.nomeEstabelecimento = nomeEstabelecimento;
+                        return produto;
+                    });
+            });
+
+            Promise.all(promises)
+                .then(function (produtosAtualizados) {
+                    popularTabela(produtosAtualizados);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
         })
         .catch(function (error) {
             console.log(error);
@@ -133,6 +148,21 @@ function popularSelect(estabelecimentos) {
     }
 }
 
+function obterNomeEstabelecimento(idEstabelecimento) {
+    return axios.get('http://localhost:8080/estabelecimento/' + idEstabelecimento, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(function (response) {
+            return response.data.nome;
+        })
+        .catch(function (error) {
+            console.log(error);
+            return '';
+        });
+}
+
 // Função para preenchimento dinâmico da tabela
 function popularTabela(dados) {
     const tabelaBody = document.getElementById('tabela-produto');
@@ -143,7 +173,7 @@ function popularTabela(dados) {
     // Percorre os dados e cria as linhas da tabela
     for (var i = 0; i < dados.length; i++) {
         var linha = document.createElement('tr');
-        linha.innerHTML = '<td>' + dados[i].id + '</td>' +
+        linha.innerHTML = '<td>' + dados[i].nomeEstabelecimento + '</td>' +
             '<td>' + dados[i].nome + '</td>' +
             '<td>' + dados[i].descricao + '</td>' +
             '<td>' + dados[i].marca + '</td>' +
