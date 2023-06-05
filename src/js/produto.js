@@ -93,26 +93,21 @@ function obterDadosEstabelecimentos() {
 }
 
 function obterDadosProduto() {
-
     const idUsuario = valorCookie('idUsuario');
-    const idEstabelecimento = valorCookie('idEstabelecimento');
 
-    axios.get('http://localhost:8080/produto/usuario/' + idUsuario + '/estabelecimento/' + idEstabelecimento + '/produto', {
+    axios.get('http://localhost:8080/produto/usuario/' + idUsuario, {
         headers: {
             'Content-Type': 'application/json'
         }
     })
         .then(function (response) {
-            // Dados obtidos com sucesso
-            var dados = response.data;
+            const dados = response.data;
             popularTabela(dados);
         })
         .catch(function (error) {
-            // Ocorreu um erro ao obter os dados da API
             console.log(error);
         });
 }
-
 
 function popularSelect(estabelecimentos) {
 
