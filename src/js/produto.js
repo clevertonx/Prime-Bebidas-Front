@@ -94,9 +94,10 @@ function obterDadosEstabelecimentos() {
 
 function obterDadosProduto() {
 
+    const idUsuario = valorCookie('idUsuario');
     const idEstabelecimento = valorCookie('idEstabelecimento');
 
-    axios.get('http://localhost:8080/estabelecimento/' + idEstabelecimento + '/produto', {
+    axios.get('http://localhost:8080/produto/usuario/' + idUsuario + '/estabelecimento/' + idEstabelecimento + '/produto', {
         headers: {
             'Content-Type': 'application/json'
         }
@@ -162,6 +163,7 @@ function popularTabela(dados) {
 
 window.onload = function () {
     obterDadosEstabelecimentos();
+    obterDadosProduto();
 };
 
 
