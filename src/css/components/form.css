@@ -16,31 +16,60 @@
     border-radius: 10px;
 }
 
+
+.formulario-estabelecimento button {
+    width: 100% !important;
+    cursor: pointer;
+    background: var(--cor-marrom);
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px #333;
+    margin-top: 10px;
+
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    transition: all 0.2s linear;
+}
+
+#botao-estabelecimento[type="submit"]:hover {
+    background: var(--cor-vermelho);
+}   
+
+
 input[type=text]:focus {
     background-color: var(--cinza-fundo);
     border: 2px solid var(--cor-vermelho);
 }
 
-
 /* Formulário para cadastro do PRODUTO */
 .formulario-produto {
-    width: 50%;
+    display: flex;
+    flex-wrap:wrap;
     margin: auto;
-    display:grid;
-    grid-template-rows: 40px 40px auto ;
-    grid-template-columns: 20% 20% 20% 20% 20% 20%;
-    gap: 1px;
-    justify-content: space-around;
-    text-align: end;
+    width: 35%;
+    justify-content: center;
 }
 
 .formulario-produto label {
-    /* text-align: end; */
-    margin-top: 15px;
+    width: 25%;
+    text-align: end;
+    margin-right: 10px;
+    margin-top: 23px;
+
 }
 
 .formulario-produto input {
+    width: 65%;
     border-radius: 10px;
+    margin-top: 15px;
+}
+
+#preco{
+    width: 50px;
 }
 
 input[type=text]:focus {
@@ -49,6 +78,81 @@ input[type=text]:focus {
 }
 
 select{
+    width: 200px;
     border-radius: 5px;
-    width: 100%;
+    margin-top: 15px;
 }
+
+
+.formulario-produto button {
+    width: 25% !important;
+    cursor: pointer;
+    background: var(--cor-marrom);
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px #333;
+    margin-top: 10px;
+
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    transition: all 0.2s linear;
+}
+
+#botao-produto[type="submit"]:hover {
+    background: #4ab3c6;
+}   
+
+
+/* Formulário para EDITAR o USUÁRIO */
+.formulario-editar-perfil {
+    display: flex;
+    flex-wrap:wrap;
+    margin: auto;
+    width: 20%;
+    justify-content: center;
+}
+
+.formulario-editar-perfil label {
+    width: 25%;
+    text-align:right;
+    margin-right: 10px;
+    margin-top: 23px;
+
+}
+
+.formulario-editar-perfil input {
+    width: 65%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+input[type=text]:focus {
+    background-color: var(--cinza-fundo);
+    border: 2px solid var(--cor-vermelho);
+}
+
+.formulario-editar-perfil button {
+    width: 25% !important;
+    cursor: pointer;
+    background: var(--cor-marrom);
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px #333;
+    margin-top: 10px;
+
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    transition: all 0.2s linear;
+}
+
+#botao-editar-usuario[type="submit"]:hover {
+    background: #4ab3c6;
+}   

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
-    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/js/produto/produto.js" defer></script>
 
     <title>Cadastro de Produtos - Prime Bebidas</title>
 </head>
@@ -64,12 +65,22 @@
                 <option value="Bitter">Bitter</option>
             </select>
 
-            <label>Imagem:</label>
-            <input type="file" name="imagem" id="imagem" required>
+            <label for="estabelecimentos-cadastrados">Estabelecimentos:</label>
+            <select id="estabelecimentos-cadastrados"></select>
 
-            <button type="submit">Cadastrar</button>
+            <label>Imagem:</label>
+            <input type="file" name="imagem" id="imagem">
+
+            <button id="botao-produto" type="submit">Cadastrar</button>
         </form>
     </div>
 
 
 </body>
+
+<footer id="rodape-login">
+    <div>
+        <h6>Prime Bebidas</h6>
+        <p>Copyright © 2023 All rights reserved</p>
+    </div>
+</footer>

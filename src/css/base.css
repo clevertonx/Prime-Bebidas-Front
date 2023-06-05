@@ -12,6 +12,8 @@
 @import url(components/rodape.css);
 @import url(components/rodape-login.css);
 @import url(components/form.css);
+@import url(components/tabela-estabelecimentos.css);
+@import url(components/tabela-produtos.css);
 
 :root {
   --amarelo-queimado: #a87818;

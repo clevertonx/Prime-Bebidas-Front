@@ -1,3 +1,4 @@
+// Cadastro
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('form');
   const emailInput = document.getElementById('email_cad');
@@ -16,8 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
       .then(response => {
-        console.log(response.data);
         window.location.href = 'login.html#paralogin';
+        console.log(response.data);
+        if (response.data && response.data.id) {
+          document.cookie = 'idUsuario=' + response.data.id;
+          alert("O Usuário foi criado com sucesso");
+        } else {
+          // A resposta do servidor não contém a propriedade data.id
+          console.log("Resposta inválida do servidor após o cadastro do estabelecimento");
+        }
+
+        document.cookie = 'idUsuario=' + response.data.id;
       })
       .catch(error => {
         console.error(error);
@@ -25,7 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.getElementById("logout").addEventListener(() => {
+document.getElementById("logout").addEventListener.addEventListener('click',() => {
+  document.cookie = 'idUsuario=';
 })
 
-
+document.getElementById("logout").addEventListener.addEventListener('click',() => {
+  document.cookie = 'idUsuario=';
+})

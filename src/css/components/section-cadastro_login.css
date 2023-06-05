@@ -116,7 +116,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: #4ab3c6;
+    background: var(--cor-vermelho);
+    border: 1px solid var(--cinza-fundo);
 }
 
 /*marcando os links para mudar de um formulário para outro */
@@ -152,9 +153,9 @@ input[type="submit"]:hover {
 }
 
 .link a:hover {
-    color: #39bfd7;
-    background: #f7f7f7;
-    border: 1px solid #4ab3c6;
+    color: var(--cinza-fundo);
+    background: var(--cor-vermelho);
+    border: 1px solid var(--cinza-fundo);
 }
 
 /* estilos para para ambos os formulários */
@@ -291,9 +292,10 @@ textarea:-moz-placeholder {
 }
 
 #botao-cad[type="submit"]:hover {
-    background: #4ab3c6;
+    background: var(--cor-vermelho);
 }   
-/* butonlogin */
+
+/* butonlogin /
 #botao-login:-moz-placeholder,
 textarea:-moz-placeholder {
     color: #bebcbc;
@@ -320,7 +322,7 @@ textarea:-moz-placeholder {
     transition: all 0.2s linear;
 }
 
-/*estilo do botão submit */
+/estilo do botão submit */
 #botao-login[type="submit"] {
     width: 100% !important;
     cursor: pointer;
@@ -339,5 +341,5 @@ textarea:-moz-placeholder {
 }
 
 #botao-login[type="submit"]:hover {
-    background: #4ab3c6;
-}   
+    background: var(--cor-vermelho);
+}

@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/js/estabelecimento/estabelecimento.js" defer></script>
+    <script src="./src/js/estabelecimento/editarEstabelecimento.js" defer></script>
+    <script src="./src/js/estabelecimento/excluirEstabelecimento.js" defer></script>
+
     <title>Meus Estabelecimentos - Prime Bebidas</title>
-</head>
+</head> 
 <header class="cabecalho">
     <nav class="nav-bar">
         <div class="cabecalho-logo">
@@ -39,7 +44,23 @@
             <h3>Meus Estabelecimentos</h3>
         </div>
         <nav class="nav-categorias">
-            <!-- ARRUMAR NOME DAS CLASSES -->
+
+            <table id="tabela-dinamica">
+                <thead class="tabela-cabecalho">
+                    <tr class="tabela-cabecalho">
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Logradouro</th>
+                        <th>Telefone</th>
+                        <th>CNPJ</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-body"></tbody>
+            </table>
+
+
             <ul>
                 <li><a href="estabelecimentosCadastro.html">Adicionar</a></li>
             </ul>

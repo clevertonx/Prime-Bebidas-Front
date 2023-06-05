@@ -1,0 +1,48 @@
+#tabela-dinamica {
+    width: 90%;
+    margin: 85px;
+    border: 3px solid #ddd;
+    text-align: center;
+    background-color: white;
+    border-color: var(--cor-marrom);
+}
+
+.tabela-cabecalho {
+    border-color: var(--amarelo-queimado);
+    border: 3px solid var(--);
+}
+
+#tabela-body td {
+    border: 2px solid var(--cor-marrom);
+    border-color: var(--cor-marrom);
+    font-size: 14px;
+    font-style: normal;
+    padding: 10px;
+}
+
+.tabela-cabecalho th {
+    padding: 10px;
+    color: white;
+    background-color: var(--cor-marrom);
+
+}
+
+button {
+    background-color: var(--cor-vermelho);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 0.3s;
+}
+
+.nav-categorias ul li a {
+    color: var(--cor-vermelho);
+    transition: 0.3s;
+}
+
