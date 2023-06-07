@@ -23,8 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
           document.cookie = 'idUsuario=' + response.data.id;
           alert("O Usuário foi criado com sucesso");
         } else {
-          // A resposta do servidor não contém a propriedade data.id
-          console.log("Resposta inválida do servidor após o cadastro do estabelecimento");
+          console.log("Resposta inválida do servidor após o cadastro do usuário");
         }
 
         document.cookie = 'idUsuario=' + response.data.id;

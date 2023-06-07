@@ -1,6 +1,5 @@
 const botaoSubmit = document.getElementById('botao-produto');
 
-// Função para obter o valor do cookie do Id do Usuário
 function valorCookie(idEstabelecimento) {
     const cookies = document.cookie.split(';');
     for (let i = 0; i < cookies.length; i++) {
@@ -12,9 +11,20 @@ function valorCookie(idEstabelecimento) {
     return null;
 }
 
-// Função para cadastrar um estabelecimento, com vinculo do Usuário 
+function getCookie(idEstabelecimento) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith(idEstabelecimento + '=')) {
+            return cookie.substring(idEstabelecimento.length + 1);
+        }
+    }
+    return null;
+}
+// Função para cadastrar um produto, com vinculo do Estabelecimento 
 function cadastrarProduto() {
-    const idEstabelecimento = valorCookie('idEstabelecimento'); // Obtém o ID do estabelecimento dos cookies
+    const idEstabelecimento = document.getElementById('estabelecimentos-cadastrados').value;
+
 
     // Dados do formulário
     const nome = document.getElementById('nome').value;
@@ -23,7 +33,6 @@ function cadastrarProduto() {
     const preco = document.getElementById('preco').value;
     const categoria = document.getElementById('categoria').value;
 
-    // Objeto do produto
     const produtoData = {
         nome,
         descricao,
@@ -32,8 +41,7 @@ function cadastrarProduto() {
         categoria,
         idEstabelecimento: idEstabelecimento
     };
-
-    // Faz a requisição POST para cadastrar o estabelecimento
+    // Faz a requisição POST para cadastrar o produto
     axios.post('http://localhost:8080/produto', produtoData, {
         headers: {
             'Content-Type': 'application/json'
@@ -52,7 +60,7 @@ function cadastrarProduto() {
                 // A resposta do servidor não contém a propriedade data.id
                 console.log("Resposta inválida do servidor após o cadastro do produto");
             }
-            // Gera Cookie para o Estabelecimento cadastrado
+            // Gera Cookie para o Produto cadastrado
             document.cookie = 'idProduto=' + response.data.id;
         })
         .catch((error) => {
@@ -62,13 +70,10 @@ function cadastrarProduto() {
 }
 document.addEventListener('DOMContentLoaded', function () {
     botaoSubmit.addEventListener('click', (event) => {
-        event.preventDefault(); // Previne o envio padrão do formulário
-        cadastrarProduto(); // Chama a função para cadastro do estabelecimento
+        event.preventDefault();
+        cadastrarProduto();
     });
 });
-
-
-
 
 function obterDadosEstabelecimentos() {
 
@@ -82,6 +87,7 @@ function obterDadosEstabelecimentos() {
         .then(function (response) {
             // Dados obtidos com sucesso
             const estabelecimentos = response.data;
+            console.log(response.data);
 
             // Chama a função para popular o select
             popularSelect(estabelecimentos);
@@ -143,9 +149,14 @@ function popularSelect(estabelecimentos) {
 
         const option = document.createElement('option');
         option.text = estabelecimento.nome;
-        option.value = estabelecimento.idEstabelecimento;
+        option.value = estabelecimento.id;
         selectElement.add(option);
     }
+    selectElement.addEventListener('change', function () {
+        const idEstabelecimentoSelecionado = selectElement.value;
+        document.cookie = 'idEstabelecimento=' + idEstabelecimentoSelecionado;
+        // Atualiza o valor do cookie com o ID do estabelecimento selecionado
+    });
 }
 
 function obterNomeEstabelecimento(idEstabelecimento) {
@@ -189,6 +200,7 @@ function popularTabela(dados) {
 window.onload = function () {
     obterDadosEstabelecimentos();
     obterDadosProduto();
+    cadastrarProduto();
 };
 
 
