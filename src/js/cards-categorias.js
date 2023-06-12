@@ -6,7 +6,7 @@ function buscarProdutosPorCategoria(categoria) {
 
             cardsContainer.innerHTML = ""; // Limpa o conteúdo existente
 
-            produtos.forEach(produto => {
+            produtos.slice(0, 4).forEach(produto => { // Limita até 4 produtos
                 const card = `
                     <div class="card-grande">
                         <img src="${produto.imagem}" alt="${produto.nome}">
@@ -22,3 +22,26 @@ function buscarProdutosPorCategoria(categoria) {
             console.error("Erro ao buscar produtos:", error);
         });
 }
+
+
+window.addEventListener('load', function () {
+    var cards = document.querySelectorAll('.card-grande img');
+    for (var i = 0; i < cards.length; i++) {
+        var card = cards[i];
+        var image = card.querySelector('img');
+        image.addEventListener('load', function () {
+            var aspectRatio = this.naturalWidth / this.naturalHeight;
+            if (aspectRatio > 1) {
+                this.style.height = 'auto';
+                this.style.width = '100%';
+            } else {
+                this.style.width = 'auto';
+                this.style.height = '100%';
+            }
+        });
+    }
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+    buscarProdutosPorCategoria('Fermentada');
+});
