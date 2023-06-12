@@ -11,7 +11,7 @@ function buscarProdutosPorCategoria(categoria) {
             <div class="card-grande">
               <img src="${produto.imagem}" alt="${produto.nome}">
               <h4>${produto.nome}</h4>
-              <p class="preco">R$${produto.preco}</p>
+              <p class="preco">R$ ${produto.preco}</p>
               <p class="descricao">${produto.descricao}</p>
             </div>
           `;
@@ -42,11 +42,11 @@ window.addEventListener('load', function () {
     }
 });
 
-function converterStringParaImagem(string) {
-    const imagem = new Image();
-    imagem.src = string;
-    return imagem;
-}
+// function converterStringParaImagem(string) {
+//     const imagem = new Image();
+//     imagem.src = string;
+//     return imagem;
+// }
 
 window.addEventListener("DOMContentLoaded", function () {
     buscarProdutosPorCategoria('Fermentada');

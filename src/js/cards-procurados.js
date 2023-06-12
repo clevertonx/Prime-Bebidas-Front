@@ -9,7 +9,7 @@ function criarCard(produto) {
     const img = document.createElement('img');
     img.src = produto.imagem;
     img.alt = produto.nome;
-    card.appendChild(img);image.png
+    card.appendChild(img);
 
     const titulo = document.createElement('h4');
     titulo.textContent = produto.nome;
@@ -17,7 +17,7 @@ function criarCard(produto) {
 
     const preco = document.createElement('p');
     preco.classList.add('preco');
-    preco.textContent = `R$${produto.preco.toFixed(2)}`;
+    preco.textContent = `R$ ${produto.preco.toFixed(2)}`;
     card.appendChild(preco);
 
     const descricao = document.createElement('p');
