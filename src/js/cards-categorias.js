@@ -8,13 +8,13 @@ function buscarProdutosPorCategoria(categoria) {
 
             produtos.slice(0, 4).forEach(produto => { // Limita até 4 produtos
                 const card = `
-                    <div class="card-grande">
-                        <img src="${produto.imagem}" alt="${produto.nome}">
-                        <h4>${produto.nome}</h4>
-                        <p class="preco">$${produto.preco}</p>
-                        <p class="descricao">${produto.descricao}</p>
-                    </div>
-                `;
+            <div class="card-grande">
+              <img src="${produto.imagem}" alt="${produto.nome}">
+              <h4>${produto.nome}</h4>
+              <p class="preco">R$${produto.preco}</p>
+              <p class="descricao">${produto.descricao}</p>
+            </div>
+          `;
                 cardsContainer.insertAdjacentHTML("beforeend", card);
             });
         })
@@ -41,6 +41,12 @@ window.addEventListener('load', function () {
         });
     }
 });
+
+function converterStringParaImagem(string) {
+    const imagem = new Image();
+    imagem.src = string;
+    return imagem;
+}
 
 window.addEventListener("DOMContentLoaded", function () {
     buscarProdutosPorCategoria('Fermentada');

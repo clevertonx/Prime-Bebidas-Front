@@ -9,7 +9,7 @@ function criarCard(produto) {
     const img = document.createElement('img');
     img.src = produto.imagem;
     img.alt = produto.nome;
-    card.appendChild(img);
+    card.appendChild(img);image.png
 
     const titulo = document.createElement('h4');
     titulo.textContent = produto.nome;

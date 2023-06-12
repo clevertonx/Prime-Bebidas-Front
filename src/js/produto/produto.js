@@ -32,6 +32,7 @@ function cadastrarProduto() {
     const marca = document.getElementById('marca').value;
     const preco = document.getElementById('preco').value;
     const categoria = document.getElementById('categoria').value;
+    const imagemInput = document.getElementById('imagem-input');
 
     const produtoData = {
         nome,
@@ -41,33 +42,56 @@ function cadastrarProduto() {
         categoria,
         idEstabelecimento: idEstabelecimento
     };
-    // Faz a requisição POST para cadastrar o produto
-    axios.post('http://localhost:8080/produto', produtoData, {
-        headers: {
-            'Content-Type': 'application/json'
+
+    if (imagemInput.files.length > 0) {
+        const imagemFile = imagemInput.files[0];
+        const reader = new FileReader();
+
+        reader.onloadend = function () {
+            // Converte a imagem para uma string e adiciona ao objeto produtoData
+            produtoData.imagem = reader.result;
+
+            // Faz a requisição POST para cadastrar o produto
+            axios.post('http://localhost:8080/produto', produtoData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then((response) => {
+                    // Redireciona ou executa outras ações após o cadastro
+                    window.location.href = 'produtos.html';
+                    console.log(response.data.id);
+                    if (response.data && response.data.id) {
+                        // O servidor retornou uma resposta válida com a propriedade data.id
+                        // Prossiga com a configuração do cookie
+                        document.cookie = 'idProduto=' + response.data.id;
+                        alert("O produto " + response.data.nome + " foi criado com sucesso");
+                    } else {
+                        // A resposta do servidor não contém a propriedade data.id
+                        console.log("Resposta inválida do servidor após o cadastro do produto");
+                    }
+                    // Gera Cookie para o Produto cadastrado
+                    document.cookie = 'idProduto=' + response.data.id;
+                })
+                .catch((error) => {
+                    // Erros da requisição (fazer)
+                    console.log(error);
+                });
         }
-    })
-        .then((response) => {
-            // Redireciona ou executa outras ações após o cadastro
-            window.location.href = 'produtos.html';
-            console.log(response.data.id);
-            if (response.data && response.data.id) {
-                // O servidor retornou uma resposta válida com a propriedade data.id
-                // Prossiga com a configuração do cookie
-                document.cookie = 'idProduto=' + response.data.id;
-                alert("O produto " + response.data.nome + " foi criado com sucesso");
-            } else {
-                // A resposta do servidor não contém a propriedade data.id
-                console.log("Resposta inválida do servidor após o cadastro do produto");
+        reader.readAsDataURL(imagemFile);
+    } else {
+        // Se nenhuma imagem foi selecionada, faça a requisição POST sem a propriedade imagem
+        axios.post('http://localhost:8080/produto', produtoData, {
+            headers: {
+                'Content-Type': 'application/json'
             }
-            // Gera Cookie para o Produto cadastrado
-            document.cookie = 'idProduto=' + response.data.id;
         })
-        .catch((error) => {
-            // Erros da requisição (fazer)
-            console.log(error);
-        });
+    }
 }
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     botaoSubmit.addEventListener('click', (event) => {
         event.preventDefault();
