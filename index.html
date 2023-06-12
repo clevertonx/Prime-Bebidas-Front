@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./src/js/cards.js" defer></script>
+    <script src="./src/js/cards-procurados.js" defer></script>
+    <script src="./src/js/cards-categorias.js" defer></script>
 
     <title>Prime Bebidas</title>
 </head>
@@ -85,40 +86,17 @@
                 <h3>Categorias</h3>
             </div>
             <nav class="nav-categorias">
-                <ul>
-                    <li><a href="#">Fermentada</a></li>
-                    <li><a href="#">Fortificada</a></li>
-                    <li><a href="#">Destilada</a></li>
-                    <li><a href="#">Licores</a></li>
-                    <li><a href="#">Bitter</a></li>
+                <ul id="categorias">
+                    <li><a href="#" data-categoria="Fermentada">Fermentada</a></li>
+                    <li><a href="#" data-categoria="Fortificada">Fortificada</a></li>
+                    <li><a href="#" data-categoria="Destilada">Destilada</a></li>
+                    <li><a href="#" data-categoria="Licores">Licores</a></li>
+                    <li><a href="#" data-categoria="Bitter">Bitter</a></li>
                 </ul>
             </nav>
-            <div class="card-grande">
-                <img src="./src/imgs/card2.jpg" alt="Product 6">
-                <h4>Heineken</h4>
-                <p class="preco">$69.99</p>
-                <p class="descricao">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed
-                    quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            </div>
-            <div class="card-grande">
-                <img src="./src/imgs/card2.jpg" alt="Product 6">
-                <h4>Heineken</h4>
-                <p class="preco">$69.99</p>
-                <p class="descricao">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed
-                    quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            </div>
-            <div class="card-grande">
-                <img src="./src/imgs/7C8A9DF01EB50B8BD5A719934902CF6C3DD5_3.png" alt="Product 6">
-                <h4>Picanha com cervejinha</h4>
-                <p class="preco">$69.99</p>
-                <p class="descricao">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed
-                    quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            </div>
 
-        </div>
+            <div id="cards-container"></div>
+
         </div>
     </section>
 
