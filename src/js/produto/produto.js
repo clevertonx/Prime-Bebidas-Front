@@ -1,5 +1,19 @@
 const botaoSubmit = document.getElementById('botao-produto');
 
+function aplicarMascarasValidacoes() {
+    // Máscara e validação para o campo de nome
+    $('#nome').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,30}" });
+
+    // Máscara para o campo de telefone
+    $('#descricao').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,30}" });
+
+    // Máscara para o campo de horário de atendimento
+    $('#marca').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,20}" });
+
+    // Máscara para o campo de CNPJ
+    $('#preco').inputmask({ regex: "[0-9]{1,15}" });
+}
+
 function valorCookie(idEstabelecimento) {
     const cookies = document.cookie.split(';');
     for (let i = 0; i < cookies.length; i++) {
@@ -226,6 +240,7 @@ window.onload = function () {
     obterDadosEstabelecimentos();
     obterDadosProduto();
     cadastrarProduto();
+    aplicarMascarasValidacoes();
 };
 
 

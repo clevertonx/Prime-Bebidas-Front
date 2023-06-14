@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./src/css/base.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/js/produto/produto.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 
     <title>Cadastro de Produtos - Prime Bebidas</title>
 </head>
@@ -49,26 +51,26 @@
 
                 <div class="nome-produto">
                     <label for="nome">Nome do produto:</label>
-                    <input type="text" name="nome" id="nome" required autofocus>
+                    <input type="text" name="nome" id="nome" placeholder="Nome do produto" required autofocus>
                 </div>
 
                 <div class="marca-produto">
                     <label for="marca">Marca:</label>
-                    <input type="text" name="marca" id="marca" required>
+                    <input type="text" name="marca" id="marca" placeholder="Marca do produto" required>
                 </div>
             </div>
 
             <div id="segunda-linha">
                 <div class="descricao-produto">
                     <label for="descricao">Descrição:</label>
-                    <input type="text" name="descricao" id="descricao" required>
+                    <input type="text" name="descricao" id="descricao" placeholder="Descrição do produto" required>
                 </div>
             </div>
 
             <div id="terceira-linha">
                 <div class="preco-produto">
                     <label for="preco">Preço:</label>
-                    <input type="text" name="preco" id="preco" required>
+                    <input type="text" name="preco" id="preco" placeholder="Valor" required>
                 </div>
 
                 <div class="categoria-produto">
