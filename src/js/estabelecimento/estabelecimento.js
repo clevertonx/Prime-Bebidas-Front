@@ -1,5 +1,30 @@
 const botaoSubmit = document.getElementById('botao-estabelecimento');
 
+function aplicarMascarasValidacoes() {
+    // Máscara e validação para o campo de nome
+    $('#nome').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,30}" });
+
+    // Máscara para o campo de telefone
+    $('#telefone').inputmask('(99) 99999-9999');
+
+    // Máscara para o campo de horário de atendimento
+    $('#horarioAtendimento').inputmask('99:99 ás 99:99');
+
+    // Máscara para o campo de CNPJ
+    $('#cnpj').inputmask('99.999.999/9999-99');
+
+    // Máscara e validação para o campo de estado
+    $('#estado').inputmask({ regex: "[A-Za-z]{2}" });
+
+    // Máscara e validação para o campo de cidade
+    $('#cidade').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,15}" });
+
+    // Máscara e validação para o campo de logradouro
+    $('#logradouro').inputmask({ regex: "[A-Za-zÀ-ÿ0-9 ]{1,30}" });
+
+    // Máscara e validação para o campo de número
+    $('#numero').inputmask({ regex: "[0-9]{1,6}" });
+}
 // Função para obter o valor do cookie do Id do Usuário
 function valorCookie(idUsuario) {
     const cookies = document.cookie.split(';');
@@ -117,8 +142,11 @@ function popularTabela(dados) {
     }
 }
 
+
+
 window.onload = function () {
     obterDadosDaAPI();
+    aplicarMascarasValidacoes();
 };
 
 document.getElementById("logout").addEventListener('click', () => {
