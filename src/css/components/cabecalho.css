@@ -51,6 +51,13 @@
     color: white;
 }
 
+.nav .links {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
 .nav a:hover {
     background-color: transparent;
     color: white;
