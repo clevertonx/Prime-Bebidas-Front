@@ -15,6 +15,7 @@
 @import url(components/form-produto.css);
 @import url(components/tabela-estabelecimentos.css);
 @import url(components/tabela-produtos.css);
+@import url(components/index.css);
 
 :root {
   --amarelo-queimado: #a87818;
