@@ -5,7 +5,7 @@ function aplicarMascarasValidacoes() {
     $('#nome').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,30}" });
 
     // Máscara para o campo de telefone
-    $('#descricao').inputmask({ regex: "[A-Za-zÀ-ÿ1-9 ]{1,30}" });
+    $('#descricao').inputmask({ regex: "[A-Za-zÀ-ÿ1-9 ]{1,200}" });
 
     // Máscara para o campo de horário de atendimento
     $('#marca').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,20}" });
