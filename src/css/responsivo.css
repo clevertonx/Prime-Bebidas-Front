@@ -17,9 +17,9 @@
     .texto-sobreposto {
         position: absolute;
         width: 35%;
-        transform: translate(-55%, -8%);
+        transform: translate(-65%, -8%);
         background-color: white;
-        line-height: 125%;
+        line-height: 100%;
     }
 
     .texto-sobreposto p {
