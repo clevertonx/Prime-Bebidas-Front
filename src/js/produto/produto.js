@@ -2,16 +2,16 @@ const botaoSubmit = document.getElementById('botao-produto');
 
 function aplicarMascarasValidacoes() {
     // Máscara e validação para o campo de nome
-    $('#nome').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,30}" });
+    $('#nome').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,60}" });
 
     // Máscara para o campo de telefone
-    $('#descricao').inputmask({ regex: "[A-Za-zÀ-ÿ1-9 ]{1,200}" });
+    $('#descricao').inputmask({ regex: "[A-Za-zÀ-ÿ1-9 ]{1,250}" });
 
     // Máscara para o campo de horário de atendimento
-    $('#marca').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,20}" });
+    $('#marca').inputmask({ regex: "[A-Za-zÀ-ÿ ]{1,30}" });
 
     // Máscara para o campo de CNPJ
-    $('#preco').inputmask({ regex: "[0-9]{1,15}" });
+    $('#preco').inputmask({ regex: "[0-9.]{1,15}" });
 }
 
 function valorCookie(idEstabelecimento) {
