@@ -1,34 +1,46 @@
 .card-grande {
     width: 60vw;
     margin: 40px;
-    padding: 20px;
-    border: 1px solid #ddd;
+    padding: 30px;
+    border: 1px solid black;
     border-radius: 5px;
     text-align: center;
     background-color: white;
     display: flex;
+    
 }   
 
 .card-grande img {
     width: 10vw;
     height: 15vh;
-    margin-bottom: 10px;
     object-fit: cover;
-}
-
-.card-grande h4 {
-    padding: 30px;
+    margin-right: 1%;
 }
 
 .card-grande .preco {
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 10px;
     padding: 30px;
+    width: 10%;
+    background-color: var(--cinza-fundo);
+    margin-right: 10px;
+    border: thin solid var(--cor-marrom);
+    border-style:groove;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
 
 .card-grande .descricao {
     font-size: 16px;
-    margin-bottom: 20px;
     padding: 40px;
+    background-color: var(--cinza-fundo);
+    width: 60%;
+    border: thin solid var(--cor-marrom);
+    border-style:groove;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }

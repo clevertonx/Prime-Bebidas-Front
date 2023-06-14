@@ -11,13 +11,13 @@ function criarCard(produto) {
     img.alt = produto.nome;
     card.appendChild(img);
 
-    const titulo = document.createElement('h4');
-    titulo.textContent = produto.nome;
-    card.appendChild(titulo);
+    // const titulo = document.createElement('h4');
+    // titulo.textContent = produto.nome;
+    // card.appendChild(titulo);
 
     const preco = document.createElement('p');
     preco.classList.add('preco');
-    preco.textContent = `R$ ${produto.preco.toFixed(2)}`;
+    preco.textContent = `${produto.nome} - R$ ${produto.preco.toFixed(2)}`;
     card.appendChild(preco);
 
     const descricao = document.createElement('p');

@@ -10,8 +10,7 @@ function buscarProdutosPorCategoria(categoria) {
                 const card = `
             <div class="card-grande">
               <img src="${produto.imagem}" alt="${produto.nome}">
-              <h4>${produto.nome}</h4>
-              <p class="preco">R$ ${produto.preco}</p>
+              <p class="preco">${produto.nome} - R$${produto.preco}</p>
               <p class="descricao">${produto.descricao}</p>
             </div>
           `;
