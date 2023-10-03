@@ -9,7 +9,6 @@
 }
 
 
-
 .cabecalho-logo {
     display: flex;
     align-items: center;
@@ -92,14 +91,6 @@
 .nav ul ul a:hover {
     background-color: transparent;
     color: white;
-}
-
-.icon-menu-mobile {
-    display: none;
-}
-
-.menuMobile {
-    display: none;
 }
 
 @media screen and (max-width: 730px) {

@@ -36,28 +36,6 @@
                 <li><a href="#login-section">Login</a></li>
             </ul>
         </div>
-        <div class="icon-menu-mobile">
-            <button onclick="menuShow"><img class="icon" src="./src/imgs/menu_white_36dp.svg"></button>
-        </div>
-    </nav>
-    <div class="menuMobile">
-        <ul>
-            <li><a href="#section-home">Home</a></li>
-            <li><a href="#section-mais-procurados">Mais Procurados</a></li>
-            <li>
-                <a href="#section-categorias">Categoria</a>
-                <ul>
-                    <li><a href="#">Fermentada</a></li>
-                    <li><a href="#">Fortificada</a></li>
-                    <li><a href="#">Destilada</a></li>
-                    <li><a href="#">Licores</a></li>
-                    <li><a href="#">Bitter</a></li>
-                </ul>
-            </li>
-            <li><a href="#section-sobre">Sobre</a></li>
-            <li><a href="#section-login">Login</a></li>
-        </ul>
-    </div>
 </header>
 
 <body>
@@ -114,6 +92,10 @@
                         <input id="senha_cad" name="senha_cad" required="required" type="password" autocomplete="on"
                             placeholder="1234" />
                     </p>
+                    <div class="password-strength">
+                        <progress id="strength-bar" min="0" max="100" value="0" class="strength-bar"></progress>
+                        <span id="strength-text" class="strength-text">Força da Senha: Fraca</span>
+                    </div>
 
                     <p>
                         <button id="botao-cad" type="submit" value="Cadastrar">Cadastrar</button>
