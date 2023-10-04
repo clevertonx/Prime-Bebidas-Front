@@ -349,37 +349,39 @@ textarea:-moz-placeholder {
     height: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.strength-bar::-webkit-progress-value {
+    border-radius: 5px; /* Adicione isso para arredondar as bordas da barra de progresso */
   }
   
-  .strength-bar[value="0"] {
-    background-color: red; /* Vermelho para senha fraca */
+  .strength-bar[value="33.33"]::-webkit-progress-value {
+    background-color: red; 
   }
   
-  .strength-bar[value="50"] {
-    background-color: yellow; /* Amarelo para senha média */
+  .strength-bar[value="66.66"]::-webkit-progress-value {
+    background-color: yellow; 
   }
   
-  .strength-bar[value="100"] {
-    background-color: green; /* Verde para senha forte */
+  .strength-bar[value="99.9"]::-webkit-progress-value {
+    background-color: green; 
   }
-  
-  /* CSS para o texto de força da senha */
-  .strength-text {
+
+.strength-text {
     display: block;
     text-align: center;
     margin-top: 5px;
     font-weight: bold;
-  }
-  
-  /* Outros estilos de cores para o texto de força da senha */
-  .strength-text[data-strength="Fraca"] {
+}
+
+.strength-text[data-strength="Fraca"] {
     color: red;
-  }
-  
-  .strength-text[data-strength="Média"] {
+}
+
+.strength-text[data-strength="Média"] {
     color: yellow;
-  }
-  
-  .strength-text[data-strength="Forte"] {
+}
+
+.strength-text[data-strength="Forte"] {
     color: green;
-  }
+}

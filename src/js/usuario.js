@@ -9,12 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
   senhaInput.addEventListener('input', function () {
     const senha = senhaInput.value;
 
-    // Calcular a força da senha com base nos critérios
     const strength = calcularForcaSenha(senha);
 
-    // Atualizar a barra de progresso e o texto de força da senha
     strengthBar.value = strength;
-    strengthText.textContent = `Força da Senha: ${interpretarForcaSenha(strength)}`;
+    
+    strengthBar.classList.remove('Fraca', 'Média', 'Forte');
+
+    const forcaSenha = interpretarForcaSenha(strength);
+    strengthBar.classList.add(forcaSenha);
+
+    strengthText.textContent = `Força da Senha: ${forcaSenha}`;
   });
 
   botaoSubmit.addEventListener('click', function (event) {
@@ -23,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const email = emailInput.value;
     const senha = senhaInput.value;
 
-    // Verificar se a senha atende aos critérios
     if (validarSenha(senha)) {
       axios.post('http://localhost:8080/usuario/cadastro', { email, senha }, {
         headers: {
@@ -50,29 +53,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Função para calcular a força da senha com base nos critérios
   function calcularForcaSenha(senha) {
     let strength = 0;
 
-    // Critério 1: Verificar o comprimento da senha (6 a 8 caracteres)
     if (senha.length >= 6 && senha.length <= 8) {
-      strength += 33.33; // 33.33% da força total
+      strength += 33.33; 
     }
   
-    // Critério 2: Verificar se há pelo menos uma letra maiúscula
     if (/[A-Z]/.test(senha)) {
-      strength += 33.33; // 33.33% da força total
+      strength += 33.33;
     }
   
-    // Critério 3: Verificar se há pelo menos um número
     if (/\d/.test(senha)) {
-      strength += 33.34; // 33.34% da força total
+      strength += 33.33; 
     }
   
     return strength;
   }
 
-  // Função para interpretar a força da senha
   function interpretarForcaSenha(strength) {
     if (strength < 50) {
       return 'Fraca';
@@ -83,9 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Função para validar a senha
   function validarSenha(senha) {
-    // Verificar se a senha atende aos critérios
     return (senha.length >= 6 && senha.length <= 8 && /[A-Z]/.test(senha) && /\d/.test(senha));
   }
 });
