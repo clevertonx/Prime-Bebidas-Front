@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const strength = calcularForcaSenha(senha);
 
     strengthBar.value = strength;
-    
+
     strengthBar.classList.remove('Fraca', 'Média', 'Forte');
 
     const forcaSenha = interpretarForcaSenha(strength);
@@ -49,7 +49,19 @@ document.addEventListener('DOMContentLoaded', function () {
           console.error(error);
         });
     } else {
-      alert("A senha deve ter de 6 a 8 caracteres, pelo menos uma letra maiúscula e um número.");
+      document.getElementById('modal-message').textContent = "A senha deve ter de 6 a 8 caracteres, pelo menos uma letra maiúscula e um número.";
+      document.getElementById('myModal').style.display = 'block';
+      document.querySelector('.close').style.display = 'block';
+    }
+  });
+
+  document.querySelector('.close').addEventListener('click', function () {
+    document.getElementById('myModal').style.display = 'none';
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target == document.getElementById('myModal')) {
+      document.getElementById('myModal').style.display = 'none';
     }
   });
 
@@ -57,17 +69,17 @@ document.addEventListener('DOMContentLoaded', function () {
     let strength = 0;
 
     if (senha.length >= 6 && senha.length <= 8) {
-      strength += 33.33; 
+      strength += 33.33;
     }
-  
+
     if (/[A-Z]/.test(senha)) {
       strength += 33.33;
     }
-  
+
     if (/\d/.test(senha)) {
-      strength += 33.33; 
+      strength += 33.33;
     }
-  
+
     return strength;
   }
 
