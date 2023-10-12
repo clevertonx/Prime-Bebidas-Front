@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/js/estabelecimento/estabelecimento.js" defer></script>
+    <script src="./src/js/estabelecimento/editarEstabelecimento.js" defer></script>
+    <script src="./src/js/estabelecimento/excluirEstabelecimento.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    
+
+    <title>Meus Estabelecimentos - Prime Bebidas</title>
+</head>
+<header class="cabecalho">
+    <nav class="nav-bar">
+        <div class="cabecalho-logo">
+            <h1><img src="./src/imgs/drinklogo.svg"> Prime Bebidas</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./logado.html#section-home">Home</a></li>
+                <li>
+                    <a href="./produtos.html">Meus Produtos</a>
+                </li>
+                <li>
+                    <a href="./estabelecimentos.html">Meus Estabelecimentos</a>
+                </li>
+                <li>
+                    <a href="./editarPerfil.html">Minhas Informações</a>
+                </li>
+                <li><a href="./login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div>
+        <div class="titulo-section">
+            <h3>Meus Estabelecimentos</h3>
+        </div>
+        <nav class="nav-categorias">
+
+            <table id="tabela-dinamica">
+                <thead class="tabela-cabecalho">
+                    <tr class="tabela-cabecalho">
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Logradouro</th>
+                        <th>Telefone</th>
+                        <th>CNPJ</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-body"></tbody>
+            </table>
+
+
+            <ul>
+                <li><a href="estabelecimentosCadastro.html">Adicionar</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+</body>
+
+<!-- <footer id="rodape">
+    <div>
+        <h6>Prime Bebidas</h6>
+        <p>Copyright © 2023 All rights reserved</p>
+    </div>
+</footer> -->
+
+
+</html>

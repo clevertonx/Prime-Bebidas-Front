@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- MUDAR O NOME DA PÁGINA -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <script src="./src/js/usuario.js" defer></script>
+    <script src="./src/js/login.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/js/cards-procurados.js" defer></script>
+    <script src="./src/js/cards-categorias.js" defer></script>
+
+    <title>Página Inicial - Prime Bebidas</title>
+</head>
+<header class="cabecalho">
+    <nav class="nav-bar">
+        <div class="cabecalho-logo">
+            <h1><img src="./src/imgs/drinklogo.svg"> Prime Bebidas</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./logado.html#section-home">Home</a></li>
+                <li>
+                    <a href="./produtos.html">Meus Produtos</a>
+                </li>
+                <li>
+                    <a href="./estabelecimentos.html">Meus Estabelecimentos</a>
+                </li>
+                <li>
+                    <a href="./editarPerfil.html">Minhas Informações</a>
+                </li>
+                <li><a id="logout" href="./login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <section id="section-home">
+        <div class="conteudo-home">
+            <h2>Compare, economize!
+            </h2>
+            <p>Encontre sua bebida mais próxima, e mais barata</p>
+        </div>
+    </section>
+
+    <section id="section-mais-procurados">
+        <div>
+            <div class="titulo-section">
+                <h3>Mais Procurados</h3>
+            </div>
+
+            <div class="engloba-cards">
+                <!-- Criação dos card's dinâmicos -->
+            </div>
+    </section>
+    <section id="section-categorias">
+        <div>
+            <div class="titulo-section">
+                <h3>Categorias</h3>
+            </div>
+            <nav class="nav-categorias">
+                <ul id="categorias">
+                    <li><a class="categorias" data-categoria="Fermentada"
+                            onclick="buscarProdutosPorCategoria('Fermentada')">Fermentada</a></li>
+                    <li><a class="categorias" data-categoria="Fortificada"
+                            onclick="buscarProdutosPorCategoria('Fortificada')">Fortificada</a></li>
+                    <li><a class="categorias" data-categoria="Destilada"
+                            onclick="buscarProdutosPorCategoria('Destilada')">Destilada</a></li>
+                    <li><a class="categorias" data-categoria="Licores"
+                            onclick="buscarProdutosPorCategoria('Licores')">Licores</a></li>
+                    <li><a class="categorias" data-categoria="Bitter"
+                            onclick="buscarProdutosPorCategoria('Bitter')">Bitter</a></li>
+                </ul>
+            </nav>
+
+            <div id="cards-container"></div>
+
+        </div>
+    </section>
+
+    <section id="section-sobre">
+        <div>
+            <div>
+                <h3 class="titulo-section">Sobre</h3>
+            </div>
+
+            <div class="imagem-sobreposto">
+
+                <img src="./src/imgs/sobre.webp" alt="Imagem de bebidas alcoólicas">
+
+                <div class="texto-sobreposto">
+                    <p>Bem-vindo ao nosso site, onde você pode encontrar as bebidas alcoólicas mais baratas em sua
+                        região!
+                        Sabemos que encontrar boas
+                        ofertas pode ser uma tarefa difícil, mas estamos aqui para ajudá-lo.</p>
+                    <p>Em nosso site, você pode pesquisar
+                        e comparar preços de diferentes bebidas alcoólicas em bares, restaurantes e lojas próximos a sua
+                        localização. Isso significa que você pode economizar dinheiro em suas bebidas favoritas sem
+                        precisar
+                        percorrer a cidade em busca das melhores ofertas.</p>
+                    <p>No entanto, é importante lembrar que o consumo de bebidas alcoólicas deve ser feito de forma
+                        responsável.
+                        Sempre beba com moderação e sempre com um motorista designado, se você estiver dirigindo. Esteja
+                        ciente
+                        das leis e regulamentos locais em relação ao consumo de bebidas alcoólicas e siga sempre as
+                        orientações
+                        dos profissionais de saúde.</p>
+                    <p>Estamos comprometidos em fornecer informações precisas e atualizadas em nosso site, ajudando-o a
+                        encontrar as melhores ofertas de bebidas alcoólicas e a aproveitar seus momentos de lazer de
+                        maneira
+                        responsável. Obrigado por usar nosso site e esperamos que você aproveite ao máximo as
+                        informações
+                        que
+                        oferecemos!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+<footer id="rodape">
+    <div>
+        <h6>Prime Bebidas</h6>
+        <p>Copyright © 2023 All rights reserved</p>
+    </div>
+</footer>
+
+</html>

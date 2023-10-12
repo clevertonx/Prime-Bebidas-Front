@@ -1,25 +1,17 @@
 .cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--amarelo-queimado);
+    background-color: var(--cor-marrom);
     color: white;
     font-family: 'Roboto', sans-serif;
-    height: 80px;
+    height: 10vh;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
 }
 
-.cabecalho .small {
-    height: 60px;
-    padding: 10px;
-}
 
 .cabecalho-logo {
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .cabecalho-logo h1 {
@@ -27,15 +19,23 @@
     font-size: 2em;
 }
 
+.cabecalho .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
 .nav {
-    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .nav li {
@@ -44,6 +44,13 @@
 }
 
 .nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav .links {
     display: block;
     padding: 10px;
     text-decoration: none;
@@ -84,4 +91,46 @@
 .nav ul ul a:hover {
     background-color: transparent;
     color: white;
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav li {
+        display: none;
+    }
+
+    .icon-menu-mobile {
+        display: block;
+    }
+
+    .icon-menu-mobile button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menuMobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+        background-color: var(--amarelo-queimado);
+    }
+
+    .menuMobile .nav li {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .menuMobile.show {
+        display: block;
+    }
+
 }

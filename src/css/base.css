@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @import url(reset.css);
+@import url(responsivo.css);
 @import url(components/cabecalho.css);
 @import url(components/section-home.css);
 @import url(components/titulo-section.css);
@@ -9,21 +10,29 @@
 @import url(components/section-categorias.css);
 @import url(components/card-grande.css);
 @import url(components/section-sobre.css);
-
+@import url(components/section-cadastro_login.css);
+@import url(components/rodape.css);
+@import url(components/rodape-login.css);
+@import url(components/form.css);
+@import url(components/form-produto.css);
+@import url(components/tabela-estabelecimentos.css);
+@import url(components/tabela-produtos.css);
+@import url(components/index.css);
 
 :root {
   --amarelo-queimado: #a87818;
   --cinza-fundo: #f9f9f9;
+  --cor-marrom: #532F23;
+  --cor-vermelho: #742520;
 }
 
 * {
   font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  width: 100vw;
+  width: 99vw;
   height: 100vh;
   background-color: var(--cinza-fundo);
 }

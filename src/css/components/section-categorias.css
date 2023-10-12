@@ -35,13 +35,14 @@
     border: solid;
     border-radius: 5px;
     border-width: 1px;
+    cursor: pointer;
 }
 
 .nav-categorias a:hover {
-    background-color: var(--amarelo-queimado);
+    background-color: var(--cor-vermelho);
     color: white;
     text-decoration: underline;
-    border-color: var(--amarelo-queimado);
+    border-color: var(--cor-vermelho);
     border-radius: 5px;
     text-decoration: none;
 }

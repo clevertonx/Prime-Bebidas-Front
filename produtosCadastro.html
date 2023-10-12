@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/js/produto/produto.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+    <title>Cadastro de Produtos - Prime Bebidas</title>
+</head>
+<header class="cabecalho">
+    <nav class="nav-bar">
+        <div class="cabecalho-logo">
+            <h1><img src="./src/imgs/drinklogo.svg"> Prime Bebidas</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./logado.html#section-home">Home</a></li>
+                <li>
+                    <a href="./produtos.html">Meus Produtos</a>
+                </li>
+                <li>
+                    <a href="./estabelecimentos.html">Meus Estabelecimentos</a>
+                </li>
+                <li>
+                    <a href="./editarPerfil.html">Minhas Informações</a>
+                </li>
+                <li><a href="./login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div>
+        <div class="titulo-section">
+            <h3>Cadastro de Produtos</h3>
+        </div>
+
+        <form id="form-produtos" method="post" action="http://localhost:8080/produto" enctype="multipart/form-data"
+            class="formulario-produto">
+
+            <div id="primeira-linha">
+
+                <div class="nome-produto">
+                    <label for="nome">Nome do produto:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome do produto" required autofocus>
+                </div>
+
+                <div class="marca-produto">
+                    <label for="marca">Marca:</label>
+                    <input type="text" name="marca" id="marca" placeholder="Marca do produto" required>
+                </div>
+            </div>
+
+            <div id="segunda-linha">
+                <div class="descricao-produto">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" name="descricao" id="descricao" placeholder="Descrição do produto" required>
+                </div>
+            </div>
+
+            <div id="terceira-linha">
+                <div class="preco-produto">
+                    <label for="preco">Preço:</label>
+                    <input type="text" name="preco" id="preco" placeholder="Valor" required>
+                </div>
+
+                <div class="categoria-produto">
+                    <label for="categoria">Selecione a Categoria:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="Fermentada">Fermentada</option>
+                        <option value="Fortificada">Fortificada</option>
+                        <option value="Destilada">Destilada</option>
+                        <option value="Licores">Licores</option>
+                        <option value="Bitter">Bitter</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="quarta-linha">
+                <div class="estabelecimentos-produto">
+                    <label for="estabelecimentos-cadastrados">Estabelecimentos:</label>
+                    <select id="estabelecimentos-cadastrados"></select>
+                </div>
+            </div>
+
+            <div id="quinta-linha">
+                <div class="imagem-do-produto">
+                    <label>Imagem:</label>
+                    <input type="file" id="imagem-input" accept="image/*">
+                </div>
+            </div>
+            <div class="butao">
+                <button id="botao-produto" type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+<footer id="rodape-login">
+    <div>
+        <h6>Prime Bebidas</h6>
+        <p>Copyright © 2023 All rights reserved</p>
+    </div>
+</footer>

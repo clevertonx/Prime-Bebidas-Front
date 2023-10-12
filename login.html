@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./src/js/usuario.js" defer></script>
+    <script src="./src/js/login.js" defer></script>
+    <title>Login - Prime Bebidas</title>
+</head>
+<header class="cabecalho">
+    <nav class="nav-bar">
+        <div class="cabecalho-logo">
+            <h1><img src="./src/imgs/drinklogo.svg"> Prime Bebidas</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#section-mais-procurados">Mais Procurados</a></li>
+                <li>
+                    <a href="./index.html#section-categorias">Categoria</a>
+                    <ul>
+                        <li><a href="#">Fermentada</a></li>
+                        <li><a href="#">Fortificada</a></li>
+                        <li><a href="#">Destilada</a></li>
+                        <li><a href="#">Licores</a></li>
+                        <li><a href="#">Bitter</a></li>
+                    </ul>
+                </li>
+                <li><a href="./index.html#section-sobre">Sobre</a></li>
+                <li><a href="#login-section">Login</a></li>
+            </ul>
+        </div>
+</header>
+
+<body>
+
+    <div>
+        <h3 class="titulo-section">Login</h3>
+    </div>
+
+    <div class="container">
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
+
+        <div class="content">
+            <!--FORMULÁRIO DE LOGIN-->
+            <div id="login">
+                <form method="post" action="http://localhost:8080/usuario/login">
+                    <h5>Login</h5>
+                    <p>
+                        <label for="email_login">Seu e-mail</label>
+                        <input id="email_login" name="email_login" required="required" type="text"
+                            placeholder="contato@email.com" />
+                    </p>
+
+                    <p>
+                        <label for="senha_login">Sua senha</label>
+                        <input id="senha_login" name="senha_login" required="required" autocomplete="on" type="password"
+                            placeholder="1234" />
+                    </p>
+
+                    <p>
+                        <button id="botao-login" type="submit" value="Login">Login</button>
+                    </p>
+
+                    <p class="link">
+                        Ainda não tem conta?
+                        <a href="#paracadastro">Cadastre-se</a>
+                    </p>
+                </form>
+            </div>
+
+            <!--FORMULÁRIO DE CADASTRO-->
+            <div id="cadastro">
+                <form method="post" action="http://localhost:8080/usuario">
+                    <h5>Cadastro</h5>
+
+                    <p>
+                        <label for="email_cad">Seu e-mail</label>
+                        <input id="email_cad" name="email_cad" required="required" type="email"
+                            placeholder="contato@email.com" />
+                    </p>
+
+                    <p>
+                        <label for="senha_cad">Sua senha</label>
+                        <input id="senha_cad" name="senha_cad" required="required" type="password" autocomplete="on"
+                            placeholder="1234" />
+                    </p>
+                    <div class="password-strength">
+                        <progress id="strength-bar" min="0" max="100" value="0" class="strength-bar"></progress>
+                        <span id="strength-text" class="strength-text">Força da Senha: Fraca</span>
+                    </div>
+
+                    <p>
+                        <button id="botao-cad" type="submit" value="Cadastrar">Cadastrar</button>
+                    </p>
+
+                    <p class="link">
+                        Já tem conta?
+                        <a href="#paralogin"> Ir para Login </a>
+                    </p>
+                </form>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <p id="modal-message"></p>
+                        <span class="close">&times;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer id="rodape-login">
+    <div>
+        <h6>Prime Bebidas</h6>
+        <p>Copyright © 2023 All rights reserved</p>
+    </div>
+</footer>
+
+</html>

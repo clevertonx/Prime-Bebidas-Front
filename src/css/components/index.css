@@ -1,0 +1,6 @@
+.nav ul {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-marrom);
+    border-radius: 5px;
+}

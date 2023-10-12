@@ -1,0 +1,196 @@
+/* Formulário para cadastro do PRODUTO */
+#form-produtos {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 35%;
+    justify-content: center;
+}
+
+.formulario-produto label {
+    display: flex;
+    text-align: end;
+
+}
+
+#primeira-linha {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.nome-produto {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+}
+
+.nome-produto label {
+    width: 20%;
+    text-align: center;
+    align-items: center;
+}
+
+.nome-produto input {
+    width: 75%;
+}
+
+.marca-produto {
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+}
+
+.marca-produto label {
+    width: 27%;
+    text-align: center;
+    align-items: center;
+}
+
+.marca-produto input {
+    width: 73%;
+}
+
+#segunda-linha {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 2%;
+}
+
+.descricao-produto {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.descricao-produto label {
+    width: 15%;
+    text-align: center;
+    align-items: center;
+}
+
+.descricao-produto input {
+    width: 85%;
+
+}
+
+#terceira-linha {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 2%;
+}
+
+.preco-produto {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+}
+
+.preco-produto label {
+    width: 20%;
+    text-align: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.preco-produto input {
+    width: 55%;
+}
+
+.categoria-produto {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+}
+
+.categoria-produto label {
+    width: 25%;
+    text-align: center;
+    align-items: center;
+}
+
+.categoria-produto select {
+    width: 75%;
+}
+
+#quarta-linha {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 2%;
+}
+
+.estabelecimentos-produto {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.estabelecimentos-produto label {
+    width: 25%;
+    text-align: center;
+    align-items: center;
+}
+
+.estabelecimentos-produto select {
+    width: 75%;
+    height: 35px;
+}
+
+#quinta-linha {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 2%;
+}
+
+.imagem-do-produto {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.imagem-do-produto label {
+    width: 15%;
+    text-align: center;
+    align-items: center;
+}
+
+.imagem-do-produto select {
+    width: 75%;
+}
+
+
+
+
+
+
+
+
+.formulario-produto button {
+    width: 25% !important;
+    cursor: pointer;
+    background: var(--cor-marrom);
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px #333;
+    margin-top: 10px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    transition: all 0.2s linear;
+}
+
+.formulario-produto .butao {
+    display: flex;
+    justify-content: center;
+}
+
+#botao-produto[type="submit"]:hover {
+    background: var(--cor-vermelho);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./src/js/estabelecimento/editarEstabelecimento.js" defer></script>
+    <script src="./src/js/estabelecimento/excluirEstabelecimento.js" defer></script>
+
+    <title>Edição de Estabelecimento - Prime Bebidas</title>
+</head>
+<header class="cabecalho">
+    <nav class="nav-bar">
+        <div class="cabecalho-logo">
+            <h1><img src="./src/imgs/drinklogo.svg"> Prime Bebidas</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./logado.html#section-home">Home</a></li>
+                <li>
+                    <a href="./produtos.html">Meus Produtos</a>
+                </li>
+                <li>
+                    <a href="./estabelecimentos.html">Meus Estabelecimentos</a>
+                </li>
+                <li>
+                    <a href="./editarPerfil.html">Minhas Informações</a>
+                </li>
+                <li><a href="./login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <div>
+        <div class="titulo-section">
+            <h3>Edição de Estabelecimento</h3>
+        </div>
+
+        <form id="form-estabelecimento" method="post" class="formulario-estabelecimento">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required autofocus>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" name="telefone" id="telefone" required>
+
+            <label for="horarioAtendimento">Horário de Atendimento:</label>
+            <input type="text" name="horarioAtendimento" id="horarioAtendimento" required>
+
+            <label for="numero">Número:</label>
+            <input type="text" name="numero" id="numero" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade" required>
+
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" name="logradouro" id="logradouro" required>
+
+            <label for="estado">Estado:</label>
+            <input type="text" name="estado" id="estado" required>
+
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" name="cnpj" id="cnpj" required>
+
+            <input type="hidden" name="_method" value="PUT">
+            <button id="botao-estabelecimento" type="submit">Salvar</button>
+        </form>
+    </div>
+
+
+</body>
+
+<footer id="rodape-login">
+    <div>
+        <h6>Prime Bebidas</h6>
+        <p>Copyright © 2023 All rights reserved</p>
+    </div>
+</footer>
