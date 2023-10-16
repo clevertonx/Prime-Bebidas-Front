@@ -14,10 +14,25 @@ function preencherCamposEstabelecimento(estabelecimento) {
     document.getElementById('cnpj').value = estabelecimento.cnpj;
 }
 
+// Função para obter o valor do cookie do Id do Usuário
+function valorCookie(idUsuario) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith(idUsuario + '=')) {
+            return cookie.substring(idUsuario.length + 1);
+        }
+    }
+    return null;
+}
+
 function carregarEstabelecimento(idEstabelecimento) {
+    const token = valorCookie('token'); // Obtém o ID do usuário dos cookies
+
     axios.get('http://localhost:8080/estabelecimento/' + idEstabelecimento, {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         }
     })
         .then(function (response) {
