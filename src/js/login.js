@@ -16,9 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
             .then(response => {
-                console.log(response.data);
-                document.cookie = 'idUsuario=' + response.data;
-                window.location.href = 'logado.html';
+                const tokenJWT = response.data.tokenJWT;
+
+                document.cookie = `token=${tokenJWT}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
+                
+                if (response.data && response.data.id && response.data.tokenJWT) {
+                    document.cookie = 'idUsuario=' + response.data.id;
+                    alert("entrei");
+                } else {
+                    console.log("Resposta inválida do servidor após o cadastro do usuário");
+                }
+                
+                document.cookie = 'idUsuario=' + response.data.id;
+                window.location.href = 'logado.html'; // Movido aqui, mas você pode optar por mantê-lo dentro do bloco if
             })
             .catch(error => {
                 console.error(error);
