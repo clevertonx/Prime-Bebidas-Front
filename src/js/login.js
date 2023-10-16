@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (idUsuario) {
                 document.cookie = `idUsuario=${idUsuario}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/`;
-                alert("entrei");
             } else {
                 console.log("Resposta inválida do servidor após o cadastro do usuário");
             }

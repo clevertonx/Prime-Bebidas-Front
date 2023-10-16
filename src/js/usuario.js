@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function () {
           window.location.href = 'login.html#paralogin';
           console.log(response.data);
           if (response.data && response.data.id) {
-            document.cookie = 'idUsuario=' + response.data.id;
+            // document.cookie = 'idUsuario=' + response.data.id; ----NÃO É MAIS NECESSÁRIO
             alert("O Usuário foi criado com sucesso");
           } else {
             console.log("Resposta inválida do servidor após o cadastro do usuário");
           }
 
-          document.cookie = 'idUsuario=' + response.data.id;
+          // document.cookie = 'idUsuario=' + response.data.id;  ----NÃO É MAIS NECESSÁRIO
         })
         .catch(error => {
           console.error(error);
