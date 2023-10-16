@@ -40,6 +40,7 @@ function valorCookie(idUsuario) {
 // Função para cadastrar um estabelecimento, com vinculo do Usuário 
 function cadastrarEstabelecimento() {
     const idUsuario = valorCookie('idUsuario'); // Obtém o ID do usuário dos cookies
+    const token = valorCookie('token'); // Obtém o ID do usuário dos cookies
 
     // Dados do formulário
     const nome = document.getElementById('nome').value;
@@ -63,17 +64,17 @@ function cadastrarEstabelecimento() {
         cnpj,
         idUsuario: idUsuario
     };
-
     // Faz a requisição POST para cadastrar o estabelecimento
     axios.post('http://localhost:8080/estabelecimento', estabelecimentoData, {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         }
     })
         .then((response) => {
             // Redireciona ou executa outras ações após o cadastro
             window.location.href = 'estabelecimentos.html';
-            console.log(response.data.id);
+            console.log(response.data);
             if (response.data && response.data.id) {
                 // O servidor retornou uma resposta válida com a propriedade data.id
                 // Prossiga com a configuração do cookie
@@ -103,10 +104,12 @@ document.addEventListener('DOMContentLoaded', function () {
 function obterDadosDaAPI() {
 
     const idUsuario = valorCookie('idUsuario');
+    const token = valorCookie('token');
 
     axios.get('http://localhost:8080/usuario/' + idUsuario + '/estabelecimento', {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         }
     })
         .then(function (response) {
@@ -150,5 +153,6 @@ window.onload = function () {
 };
 
 document.getElementById("logout").addEventListener('click', () => {
-    document.cookie = 'idUsuario=';
+    document.cookie = 'idUsuario=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
 });
