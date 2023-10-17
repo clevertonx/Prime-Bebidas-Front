@@ -233,6 +233,13 @@ function popularTabela(dados) {
     }
 }
 
+document.getElementById("logout").addEventListener('click', () => {
+    document.cookie = 'idUsuario=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'idEstabelecimento=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'idProduto=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+});
+
 window.onload = function () {
     obterDadosEstabelecimentos();
     obterDadosProduto();

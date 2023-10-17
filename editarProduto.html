@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
     <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./src/js/produto/produto.js" defer></script>
     <script src="./src/js/produto/editarProduto.js" defer></script>
     <script src="./src/js/produto/excluirProduto.js" defer></script>
 
@@ -65,6 +66,11 @@
                 <option value="Licores">Licores</option>
                 <option value="Bitter">Bitter</option>
             </select>
+
+            <div class="estabelecimentos-produto">
+                <label for="estabelecimentos-cadastrados">Estabelecimentos:</label>
+                <select id="estabelecimentos-cadastrados"></select>
+            </div>
 
             <label>Imagem:</label>
             <input type="file" name="imagem" id="imagem">
