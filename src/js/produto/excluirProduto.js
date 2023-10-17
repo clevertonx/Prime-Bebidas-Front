@@ -12,7 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function excluirProduto(id) {
-    axios.delete(`http://localhost:8080/produto/${id}`)
+    const token = valorCookie('token');
+    axios.delete(`http://localhost:8080/produto/${id}`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }
+    })
         .then((response) => {
             if (response.status === 200) {
                 console.log("Produto excluído com sucesso");
