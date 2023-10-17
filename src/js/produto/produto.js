@@ -192,9 +192,13 @@ function popularSelect(estabelecimentos) {
 }
 
 function obterNomeEstabelecimento(idEstabelecimento) {
+    const token = valorCookie('token'); // Obtém o ID do usuário dos cookies
+    // const idUsuario = valorCookie('idUsuario');
+
     return axios.get('http://localhost:8080/estabelecimento/' + idEstabelecimento, {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         }
     })
         .then(function (response) {
