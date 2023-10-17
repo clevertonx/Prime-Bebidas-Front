@@ -25,16 +25,6 @@ function valorCookie(idEstabelecimento) {
     return null;
 }
 
-function getCookie(idEstabelecimento) {
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        if (cookie.startsWith(idEstabelecimento + '=')) {
-            return cookie.substring(idEstabelecimento.length + 1);
-        }
-    }
-    return null;
-}
 // Função para cadastrar um produto, com vinculo do Estabelecimento 
 function cadastrarProduto() {
     const idEstabelecimento = document.getElementById('estabelecimentos-cadastrados').value;
@@ -76,9 +66,13 @@ function cadastrarProduto() {
 }
 
 function enviarProduto(produtoData) {
+    const idEstabelecimento = valorCookie('idEstabelecimento'); // Obtém o ID do usuário dos cookies
+    const token = valorCookie('token'); // Obtém o ID do usuário dos cookies
+
     axios.post('http://localhost:8080/produto', produtoData, {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         }
     })
         .then((response) => {
@@ -103,10 +97,6 @@ function enviarProduto(produtoData) {
         });
 }
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     botaoSubmit.addEventListener('click', (event) => {
         event.preventDefault();
@@ -115,12 +105,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function obterDadosEstabelecimentos() {
-
+    const token = valorCookie('token'); // Obtém o ID do usuário dos cookies
     const idUsuario = valorCookie('idUsuario');
 
     axios.get('http://localhost:8080/usuario/' + idUsuario + '/estabelecimento', {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         }
     })
         .then(function (response) {
@@ -138,11 +129,13 @@ function obterDadosEstabelecimentos() {
 }
 
 function obterDadosProduto() {
+    const token = valorCookie('token'); // Obtém o ID do usuário dos cookies
     const idUsuario = valorCookie('idUsuario');
 
     axios.get('http://localhost:8080/produto/usuario/' + idUsuario, {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         }
     })
         .then(function (response) {
