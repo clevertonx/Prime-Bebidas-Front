@@ -22,9 +22,9 @@
     font-weight: bold;
     padding: 30px;
     width: 10%;
-    background-color: var(--cinza-fundo);
+    background-color: var(--branco);
     margin-right: 10px;
-    border: thin solid var(--cor-marrom);
+    border: thin solid var(--preto);
     border-style:groove;
     display: flex;
     justify-content: center;
@@ -35,9 +35,9 @@
 .card-grande .descricao {
     font-size: 16px;
     padding: 40px;
-    background-color: var(--cinza-fundo);
+    background-color: var(--branco);
     width: 60%;
-    border: thin solid var(--cor-marrom);
+    border: thin solid var(--preto);
     border-style:groove;
     display: flex;
     justify-content: center;

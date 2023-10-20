@@ -172,7 +172,7 @@
 .formulario-produto button {
     width: 25% !important;
     cursor: pointer;
-    background: var(--cor-marrom);
+    background: var(--preto);
     padding: 8px 5px;
     color: #fff;
     font-size: 20px;
@@ -192,5 +192,5 @@
 }
 
 #botao-produto[type="submit"]:hover {
-    background: var(--cor-vermelho);
+    background: var(--cor-amarelo);
 }

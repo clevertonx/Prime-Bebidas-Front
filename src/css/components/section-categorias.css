@@ -30,7 +30,7 @@
 
 .nav-categorias a {
     text-decoration: none;
-    color: var(--amarelo-queimado);
+    color: var(--cinza);
     padding: 5px;
     border: solid;
     border-radius: 5px;
@@ -39,10 +39,10 @@
 }
 
 .nav-categorias a:hover {
-    background-color: var(--cor-vermelho);
+    background-color: var(--cor-amarelo);
     color: white;
     text-decoration: underline;
-    border-color: var(--cor-vermelho);
+    border-color: var(--cor-amarelo);
     border-radius: 5px;
     text-decoration: none;
 }

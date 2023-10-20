@@ -4,17 +4,17 @@
     border: 3px solid #ddd;
     text-align: center;
     background-color: white;
-    border-color: var(--cor-marrom);
+    border-color: var(--preto);
 }
 
 .tabela-cabecalho {
-    border-color: var(--amarelo-queimado);
+    border-color: var(--cinza);
     border: 3px solid var(--);
 }
 
 #tabela-produto td {
-    border: 2px solid var(--cor-marrom);
-    border-color: var(--cor-marrom);
+    border: 2px solid var(--preto);
+    border-color: var(--preto);
     font-size: 14px;
     font-style: normal;
     padding: 10px;
@@ -23,12 +23,12 @@
 .tabela-cabecalho th {
     padding: 10px;
     color: white;
-    background-color: var(--cor-marrom);
+    background-color: var(--preto);
 
 }
 
 button {
-    background-color: var(--cor-vermelho);
+    background-color: var(--cor-amarelo);
     color: white;
     padding: 5px;
     border-radius: 5px;
@@ -42,6 +42,6 @@ button:hover {
 }
 
 .nav-categorias ul li a {
-    color: var(--cor-vermelho);
+    color: var(--cor-amarelo);
     transition: 0.3s;
 }

@@ -17,7 +17,7 @@
 
 .lista-desordenada li a{
 padding-left: 10px;
-background-color: var(--amarelo-queimado);
+background-color: var(--cinza);
 text-decoration: none;
 }
 

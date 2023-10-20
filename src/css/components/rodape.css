@@ -1,9 +1,9 @@
 #rodape {
     height: 10vh;
-    background-color: var(--cor-marrom);
+    background-color: var(--preto);
     color: white;
     padding: 30px;
-    align-items: left;
+    align-items: start;
     display: flex;
     margin-top: 100px;
 }

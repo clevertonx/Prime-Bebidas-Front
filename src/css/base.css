@@ -20,10 +20,10 @@
 @import url(components/index.css);
 
 :root {
-  --amarelo-queimado: #a87818;
-  --cinza-fundo: #f9f9f9;
-  --cor-marrom: #532F23;
-  --cor-vermelho: #742520;
+  --cinza: #646464;
+  --branco: #f9f9f9;
+  --preto: #000000;
+  --cor-amarelo: #fcda00;
 }
 
 * {
@@ -34,7 +34,7 @@ body {
   font-family: 'Roboto', sans-serif;
   width: 99vw;
   height: 100vh;
-  background-color: var(--cinza-fundo);
+  background-color: var(--branco);
 }
 
 main {

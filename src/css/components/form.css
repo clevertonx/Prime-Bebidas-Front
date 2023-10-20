@@ -20,7 +20,7 @@
 .formulario-estabelecimento button {
     width: 100% !important;
     cursor: pointer;
-    background: var(--cor-marrom);
+    background: var(--preto);
     padding: 8px 5px;
     color: #fff;
     font-size: 20px;
@@ -36,13 +36,13 @@
 }
 
 #botao-estabelecimento[type="submit"]:hover {
-    background: var(--cor-vermelho);
+    background: var(--cor-amarelo);
 }   
 
 
 input[type=text]:focus {
-    background-color: var(--cinza-fundo);
-    border: 2px solid var(--cor-vermelho);
+    background-color: var(--branco);
+    border: 2px solid var(--cor-amarelo);
 }
 
 /* Formulário para EDITAR o USUÁRIO */
@@ -69,14 +69,14 @@ input[type=text]:focus {
 }
 
 input[type=text]:focus {
-    background-color: var(--cinza-fundo);
-    border: 2px solid var(--cor-vermelho);
+    background-color: var(--branco);
+    border: 2px solid var(--cor-amarelo);
 }
 
 .formulario-editar-perfil button {
     width: 25% !important;
     cursor: pointer;
-    background: var(--cor-marrom);
+    background: var(--preto);
     padding: 8px 5px;
     color: #fff;
     font-size: 20px;
@@ -92,5 +92,5 @@ input[type=text]:focus {
 }
 
 #botao-editar-usuario[type="submit"]:hover {
-    background:  var(--cor-marrom);
+    background:  var(--preto);
 }   
