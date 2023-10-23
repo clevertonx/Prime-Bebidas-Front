@@ -1,32 +1,79 @@
+let loginAttempts = 0;
+let waitingTime = 0;
+function updateWaitingTime() {
+    const tempoDeEsperaElement = document.getElementById('tempo-de-espera');
+    const minutes = Math.floor(waitingTime / 60000);
+    const seconds = Math.floor((waitingTime % 60000) / 1000);
+
+    if (waitingTime > 0) {
+        tempoDeEsperaElement.textContent = `Aguarde ${minutes} minutos e ${seconds} segundos`;
+    } else {
+        tempoDeEsperaElement.textContent = '';
+    }
+}
+
+function startTimer() {
+    timer = setInterval(() => {
+        waitingTime -= 1000;
+        updateWaitingTime();
+        if (waitingTime <= 0) {
+            clearInterval(timer);
+            localStorage.removeItem('waitingTime');
+            updateWaitingTime();
+        }
+    }, 1000);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
     const emailInput = document.getElementById('email_login');
     const senhaInput = document.getElementById('senha_login');
     const botaoSubmit = document.getElementById('botao-login');
 
+    waitingTime = parseInt(localStorage.getItem('waitingTime')) || 0;
+
+    if (waitingTime > 0) {
+        updateWaitingTime();
+        startTimer();
+    }
+
     botaoSubmit.addEventListener('click', function (event) {
         event.preventDefault();
-        const email = emailInput.value;
-        const senha = senhaInput.value;
+        if (loginAttempts < 3) {
+            const email = emailInput.value;
+            const senha = senhaInput.value;
 
-
-        axios.post('http://localhost:8080/usuario/login', { email, senha }, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => {
-                console.log(response.data);
-                document.cookie = 'idUsuario=' + response.data;
-                window.location.href = 'logado.html';
+            axios.post('http://localhost:8080/usuario/login', { email, senha }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             })
-            .catch(error => {
-                console.error(error);
-                alert("Usuário ou senha inválidos.")
-            });
+                .then(response => {
+                    console.log(response.data);
+                    document.cookie = 'idUsuario=' + response.data;
+                    window.location.href = 'logado.html';
+                })
+                .catch(error => {
+                    console.error(error);
+                    loginAttempts++;
+                    if (loginAttempts === 3) {
+
+                        waitingTime = 3 * 60 * 1000;
+                        localStorage.setItem('waitingTime', waitingTime);
+                        updateWaitingTime();
+                        startTimer();
+                    }
+                    alert("Usuário ou senha inválidos. Tentativas restantes: " + (3 - loginAttempts));
+                });
+        } else {
+            alert("Você excedeu o limite de tentativas. Aguarde 3 minutos para tentar novamente.");
+        }
     });
 });
 
-document.getElementById("logout").addEventListener.addEventListener('click', () => {
+document.getElementById("logout").addEventListener('click', () => {
+    loginAttempts = 0;
+    localStorage.removeItem('waitingTime');
     document.cookie = 'idUsuario=';
+    updateWaitingTime();
 });
