@@ -24,6 +24,18 @@ function startTimer() {
     }, 1000);
 }
 
+function showModalError(message) {
+    const modal = document.getElementById('loginModal');
+    const modalMessage = document.getElementById('modalMessage');
+    modal.style.display = 'block';
+    modalMessage.innerHTML = message;
+}
+
+document.getElementById('closeModalAttempt').addEventListener('click', function () {
+    const modal = document.getElementById('loginModal');
+    modal.style.display = 'none';
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
     const emailInput = document.getElementById('email_login');
@@ -63,10 +75,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         updateWaitingTime();
                         startTimer();
                     }
-                    alert("Usuário ou senha inválidos. Tentativas restantes: " + (3 - loginAttempts));
+                    showModalError("Usuário ou senha inválidos. Tentativas restantes: " + (3 - loginAttempts));
                 });
         } else {
-            alert("Você excedeu o limite de tentativas. Aguarde 3 minutos para tentar novamente.");
+            showModalError("Você excedeu o limite de tentativas. Aguarde 3 minutos para tentar novamente.");
         }
     });
 });
