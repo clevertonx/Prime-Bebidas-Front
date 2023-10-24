@@ -1,11 +1,12 @@
 #rodape {
     height: 10vh;
-    background-color: var(--preto);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 43%, rgba(249, 255, 0, 1) 100%);
     color: white;
     padding: 30px;
     align-items: start;
     display: flex;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 #rodape h6 {

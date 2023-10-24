@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    background-color: var(--preto);
 }
 
 .imagem-sobreposto {
