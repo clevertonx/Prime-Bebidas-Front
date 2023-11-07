@@ -24,11 +24,10 @@
     padding: 10px;
     color: white;
     background-color: var(--preto);
-
 }
 
 button {
-    background-color: var(--cor-amarelo);
+    background-color: var(--preto);
     color: white;
     padding: 5px;
     border-radius: 5px;
@@ -39,6 +38,7 @@ button:hover {
         -ms-transform: scale(1.1);
         transform: scale(1.1);
         transition: 0.3s;
+        background-color: var(--cor-amarelo);
 }
 
 .nav-categorias ul li a {
