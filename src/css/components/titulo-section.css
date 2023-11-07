@@ -1,12 +1,13 @@
 .titulo-section {
     font-family: 'Roboto', sans-serif;
     margin-top: 0;
-    text-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
+    text-shadow: 1px 1px 1px rgb(990 990 980 / 10%);
     letter-spacing: 0.5px;
     text-transform: uppercase;
     line-height: 1.5;
     justify-content: center;
     display: flex;
+    color: var(--cor-amarelo);
     padding: 70px;
     padding-top: 150px;
     font-weight: bolder;    

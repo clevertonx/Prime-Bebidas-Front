@@ -139,7 +139,7 @@ input[type="submit"]:hover {
 
 .link a {
     font-weight: bold;
-    background: #f7f8f1;
+    background: var(--preto);
     padding: 6px;
     color: var(--cor-amarelo);
     margin: 1px;
@@ -295,34 +295,6 @@ textarea:-moz-placeholder {
     background: var(--cor-amarelo);
 }
 
-/* butonlogin /
-#botao-login:-moz-placeholder,
-textarea:-moz-placeholder {
-    color: #bebcbc;
-    font-style: italic;
-}
-
-#botao-login {
-    outline: none;
-}
-
-#botao-login:not([type="checkbox"]) {
-    width: 95%;
-    margin-top: 4px;
-    padding: 10px;
-    border: 1px solid #b2b2b2;
-
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-}
-
-/estilo do botão submit */
 #botao-login[type="submit"] {
     width: 100% !important;
     cursor: pointer;
