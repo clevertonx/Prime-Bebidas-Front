@@ -29,6 +29,7 @@
     width: 20%;
     text-align: center;
     align-items: center;
+    color: var(--branco);
 }
 
 .nome-produto input {
@@ -45,6 +46,7 @@
     width: 27%;
     text-align: center;
     align-items: center;
+    color: var(--branco);
 }
 
 .marca-produto input {
@@ -62,12 +64,14 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    color: var(--branco);
 }
 
 .descricao-produto label {
     width: 15%;
     text-align: center;
     align-items: center;
+    color: var(--branco);
 }
 
 .descricao-produto input {
@@ -93,6 +97,7 @@
     text-align: center;
     align-items: center;
     margin-right: 30px;
+    color: var(--branco);
 }
 
 .preco-produto input {
@@ -109,6 +114,7 @@
     width: 25%;
     text-align: center;
     align-items: center;
+    color: var(--branco);
 }
 
 .categoria-produto select {
@@ -132,6 +138,7 @@
     width: 25%;
     text-align: center;
     align-items: center;
+    color: var(--branco);
 }
 
 .estabelecimentos-produto select {
@@ -156,6 +163,7 @@
     width: 15%;
     text-align: center;
     align-items: center;
+    color: var(--branco);
 }
 
 .imagem-do-produto select {
