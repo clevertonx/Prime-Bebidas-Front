@@ -33,6 +33,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .nav ul {
@@ -40,6 +41,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 52%, rgba(2, 0, 36, 1) 52%);
 }
 
 .nav li {
