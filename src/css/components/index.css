@@ -1,6 +1,6 @@
 .nav ul {
     display: flex;
     align-items: center;
-    background-color: var(--preto);
+    background-color: (2, 0, 36);
     border-radius: 5px;
 }

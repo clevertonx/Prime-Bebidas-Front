@@ -1,6 +1,6 @@
 .cabecalho {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 70%, rgba(249, 255, 0, 1) 120%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 70%, rgba(249, 255, 0, 1) 120%);
     color: white;
     font-family: 'Roboto', sans-serif;
     height: 16vh;
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 52%, rgba(2, 0, 36, 1) 52%);
+    background: linear-gradient(180deg, rgba(0, 0, 00, 1) 52%, rgba(0, 0, 00, 1) 52%);
 }
 
 .nav li {
