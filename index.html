@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="./src/css/base.css"/>
-    <link rel="stylesheet" href="./src/css/responsivo.css"/>
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <link rel="stylesheet" href="./src/css/responsivo.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/js/cards-procurados.js" defer></script>
     <script src="./src/js/cards-categorias.js" defer></script>
@@ -16,9 +16,7 @@
 </head>
 <header class="cabecalho">
     <nav class="nav-bar">
-        <div class="cabecalho-logo">
-            <img src="./src/imgs/prime.svg">
-        </div>
+        <h1>Prime Bebidas</h1>
         <div class="nav">
             <ul>
                 <li><a class="links" href="#section-home">Home</a></li>
@@ -41,89 +39,89 @@
 </header>
 
 <body>
-<section id="section-home">
-    <div class="conteudo-home">
-        <h2>Compare, economize!
-        </h2>
-        <p>Encontre sua bebida mais próxima, e mais barata</p>
-    </div>
-</section>
-
-<section id="section-mais-procurados">
-    <div>
-        <div class="titulo-section">
-            <h3>Mais Procurados</h3>
+    <section id="section-home">
+        <div class="conteudo-home">
+            <h2>Compare, economize!
+            </h2>
+            <p>Encontre sua bebida mais próxima, e mais barata</p>
         </div>
+    </section>
 
-        <div class="engloba-cards">
-            <!-- Criação dos card's dinâmicos -->
-        </div>
-</section>
-<section id="section-categorias">
-    <div>
-        <div class="titulo-section">
-            <h3>Categorias</h3>
-        </div>
-        <nav class="nav-categorias">
-            <ul id="categorias">
-                <li><a class="categorias" data-categoria="Fermentada"
-                       onclick="buscarProdutosPorCategoria('Fermentada')">Fermentada</a></li>
-                <li><a class="categorias" data-categoria="Fortificada"
-                       onclick="buscarProdutosPorCategoria('Fortificada')">Fortificada</a></li>
-                <li><a class="categorias" data-categoria="Destilada"
-                       onclick="buscarProdutosPorCategoria('Destilada')">Destilada</a></li>
-                <li><a class="categorias" data-categoria="Licores">Licores</a></li>
-                <li><a class="categorias" data-categoria="Bitter"
-                       onclick="buscarProdutosPorCategoria('Bitter')">Bitter</a></li>
-            </ul>
-        </nav>
-
-        <div id="cards-container"></div>
-
-    </div>
-</section>
-
-<section id="section-sobre">
-    <div>
+    <section id="section-mais-procurados">
         <div>
-            <h3 class="titulo-section">Sobre</h3>
-        </div>
-
-        <div class="imagem-sobreposto">
-
-            <img src="./src/imgs/sobre.webp" alt="Imagem de bebidas alcoólicas">
-
-            <div class="texto-sobreposto">
-                <p>Bem-vindo ao nosso site, onde você pode encontrar as bebidas alcoólicas mais baratas em sua
-                    região!
-                    Sabemos que encontrar boas
-                    ofertas pode ser uma tarefa difícil, mas estamos aqui para ajudá-lo.</p>
-                <p>Em nosso site, você pode pesquisar
-                    e comparar preços de diferentes bebidas alcoólicas em bares, restaurantes e lojas próximos a sua
-                    localização. Isso significa que você pode economizar dinheiro em suas bebidas favoritas sem
-                    precisar
-                    percorrer a cidade em busca das melhores ofertas.</p>
-                <p>No entanto, é importante lembrar que o consumo de bebidas alcoólicas deve ser feito de forma
-                    responsável.
-                    Sempre beba com moderação e sempre com um motorista designado, se você estiver dirigindo. Esteja
-                    ciente
-                    das leis e regulamentos locais em relação ao consumo de bebidas alcoólicas e siga sempre as
-                    orientações
-                    dos profissionais de saúde.</p>
-                <p>Estamos comprometidos em fornecer informações precisas e atualizadas em nosso site, ajudando-o a
-                    encontrar as melhores ofertas de bebidas alcoólicas e a aproveitar seus momentos de lazer de
-                    maneira
-                    responsável. Obrigado por usar nosso site e esperamos que você aproveite ao máximo as
-                    informações
-                    que
-                    oferecemos!</p>
+            <div class="titulo-section">
+                <h3>Mais Procurados</h3>
             </div>
 
-        </div>
-    </div>
+            <div class="engloba-cards">
+                <!-- Criação dos card's dinâmicos -->
+            </div>
+    </section>
+    <section id="section-categorias">
+        <div>
+            <div class="titulo-section">
+                <h3>Categorias</h3>
+            </div>
+            <nav class="nav-categorias">
+                <ul id="categorias">
+                    <li><a class="categorias" data-categoria="Fermentada"
+                            onclick="buscarProdutosPorCategoria('Fermentada')">Fermentada</a></li>
+                    <li><a class="categorias" data-categoria="Fortificada"
+                            onclick="buscarProdutosPorCategoria('Fortificada')">Fortificada</a></li>
+                    <li><a class="categorias" data-categoria="Destilada"
+                            onclick="buscarProdutosPorCategoria('Destilada')">Destilada</a></li>
+                    <li><a class="categorias" data-categoria="Licores">Licores</a></li>
+                    <li><a class="categorias" data-categoria="Bitter"
+                            onclick="buscarProdutosPorCategoria('Bitter')">Bitter</a></li>
+                </ul>
+            </nav>
 
-</section>
-<script src="./src/js/index.js"></script>
+            <div id="cards-container"></div>
+
+        </div>
+    </section>
+
+    <section id="section-sobre">
+        <div>
+            <div>
+                <h3 class="titulo-section">Sobre</h3>
+            </div>
+
+            <div class="imagem-sobreposto">
+
+                <img src="./src/imgs/sobre.webp" alt="Imagem de bebidas alcoólicas">
+
+                <div class="texto-sobreposto">
+                    <p>Bem-vindo ao nosso site, onde você pode encontrar as bebidas alcoólicas mais baratas em sua
+                        região!
+                        Sabemos que encontrar boas
+                        ofertas pode ser uma tarefa difícil, mas estamos aqui para ajudá-lo.</p>
+                    <p>Em nosso site, você pode pesquisar
+                        e comparar preços de diferentes bebidas alcoólicas em bares, restaurantes e lojas próximos a sua
+                        localização. Isso significa que você pode economizar dinheiro em suas bebidas favoritas sem
+                        precisar
+                        percorrer a cidade em busca das melhores ofertas.</p>
+                    <p>No entanto, é importante lembrar que o consumo de bebidas alcoólicas deve ser feito de forma
+                        responsável.
+                        Sempre beba com moderação e sempre com um motorista designado, se você estiver dirigindo. Esteja
+                        ciente
+                        das leis e regulamentos locais em relação ao consumo de bebidas alcoólicas e siga sempre as
+                        orientações
+                        dos profissionais de saúde.</p>
+                    <p>Estamos comprometidos em fornecer informações precisas e atualizadas em nosso site, ajudando-o a
+                        encontrar as melhores ofertas de bebidas alcoólicas e a aproveitar seus momentos de lazer de
+                        maneira
+                        responsável. Obrigado por usar nosso site e esperamos que você aproveite ao máximo as
+                        informações
+                        que
+                        oferecemos!</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <script src="./src/js/index.js"></script>
 </body>
 
 <footer id="rodape">
