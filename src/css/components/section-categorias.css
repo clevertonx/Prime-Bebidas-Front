@@ -41,7 +41,8 @@
 
 .nav-categorias a:hover {
     background-color: var(--cor-amarelo);
-    color: white;
+    color: var(--preto);
+    font-weight: bold;
     text-decoration: underline;
     border-color: var(--cor-amarelo);
     border-radius: 5px;

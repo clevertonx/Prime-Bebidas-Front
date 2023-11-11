@@ -8,10 +8,8 @@
     z-index: 3;
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
-    text-decoration: none;
-    /* color: white; */
 }
 
 .cabecalho .nav-bar {
@@ -90,7 +88,7 @@ h1{
     color: white;
 }
 
-@media screen and (max-width: 730px) {
+/* @media screen and (max-width: 730px) {
     .nav-bar {
         padding: 1.5rem 4rem;
     }
@@ -130,4 +128,4 @@ h1{
         display: block;
     }
 
-}
+} */

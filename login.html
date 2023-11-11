@@ -15,15 +15,13 @@
 </head>
 <header class="cabecalho">
     <nav class="nav-bar">
-        <div class="cabecalho-logo">
-            <h1><img src="./src/imgs/teste1.png"> </h1>
-        </div>
+        <div id="link-cabecalho"> <h1>Prime Bebidas</h1> </div>
         <div class="nav">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./index.html#section-mais-procurados">Mais Procurados</a></li>
+                <li><a class="links" href="#section-home">Home</a></li>
+                <li><a class="links" href="#section-mais-procurados">Mais Procurados</a></li>
                 <li>
-                    <a href="./index.html#section-categorias">Categoria</a>
+                    <a class="links" href="#section-categorias">Categoria</a>
                     <ul>
                         <li><a href="#">Fermentada</a></li>
                         <li><a href="#">Fortificada</a></li>
@@ -32,18 +30,17 @@
                         <li><a href="#">Bitter</a></li>
                     </ul>
                 </li>
-                <li><a href="./index.html#section-sobre">Sobre</a></li>
-                <li><a href="#login-section">Login</a></li>
+                <li><a class="links" href="#section-sobre">Sobre</a></li>
+                <li><a href="./login.html">Login</a></li>
             </ul>
         </div>
+    </nav>
 </header>
 
 <body>
-
     <div>
         <h3 class="titulo-section">Login</h3>
     </div>
-
     <div class="container">
         <a class="links" id="paracadastro"></a>
         <a class="links" id="paralogin"></a>
@@ -115,6 +112,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var redirecionaHome = document.getElementById("link-cabecalho");
+    
+            redirecionaHome.addEventListener("click", function () {
+  
+                window.location.href = "./index.html"; 
+            });
+        });
+    </script>
 
 </body>
 

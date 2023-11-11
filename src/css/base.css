@@ -21,7 +21,7 @@
 @import url(components/index.css);
 
 :root {
-  --cinza: #646464;
+  /* --cinza: #646464; */
   --branco: #f9f9f9;
   --preto: #000000;
   --cor-amarelo: #fcda00;
