@@ -2,10 +2,16 @@
     background: rgb(0, 0, 0);
     color: white;
     font-family: 'Roboto', sans-serif;
-    height: 7vh;
+    height: 9vh;
     position: fixed;
     width: 100%;
     z-index: 3;
+}
+
+.linha-amarela {
+    height: 3px;
+    background-color: var(--cor-amarelo); /* Cor da linha amarela */
+    width: 100%;
 }
 
 h1 {
@@ -67,7 +73,7 @@ h1 {
     display: none;
 }
 
-.nav ul li:hover>ul {
+.nav ul li:hover > ul {
     display: flex;
     flex-direction: column;
 }

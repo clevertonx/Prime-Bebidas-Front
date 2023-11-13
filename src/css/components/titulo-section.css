@@ -7,9 +7,8 @@
     justify-content: center;
     display: flex;
     color: var(--cor-amarelo);
-    padding: 70px;
-    padding-top: 150px;
-    font-weight: bolder;    
+    padding: 70px 25px 70px 25px;
+    font-weight: bolder;
     font-size: 1.5vw;
     text-decoration: underline;
     text-underline-offset: 20px;
