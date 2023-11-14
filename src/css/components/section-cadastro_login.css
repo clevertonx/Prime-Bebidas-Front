@@ -69,16 +69,19 @@ label {
 ::-webkit-input-placeholder {
     color: #bebcbc;
     font-style: italic;
+    font-family: 'Roboto', sans-serif;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
     color: #bebcbc;
     font-style: italic;
+    font-family: 'Roboto', sans-serif;
 }
 
 input {
     outline: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 input:not([type="checkbox"]) {
