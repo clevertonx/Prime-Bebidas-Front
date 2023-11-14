@@ -14,10 +14,11 @@
 
 #tabela-body td {
     border: 2px solid var(--preto);
-    border-color: var(--preto);
+    border-color: var(--cinza);
     font-size: 14px;
     font-style: normal;
     padding: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .tabela-cabecalho th {
@@ -36,13 +37,12 @@ button {
 }
 
 button:hover {
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 0.3s;
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .nav-categorias ul li a {
     color: var(--cor-amarelo);
     transition: 0.3s;
 }
-
