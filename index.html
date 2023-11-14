@@ -23,12 +23,12 @@
                 <li><a class="links" href="#section-mais-procurados">Mais Procurados</a></li>
                 <li>
                     <a class="links" href="#section-categorias">Categoria</a>
-                    <ul>
-                        <li><a href="#section-categorias">Fermentada</a></li>
-                        <li><a href="#">Fortificada</a></li>
-                        <li><a href="#">Destilada</a></li>
-                        <li><a href="#">Licores</a></li>
-                        <li><a href="#">Bitter</a></li>
+                    <ul id="lista-categorias">
+                        <li><a href="#section-categorias" data-categoria="Fermentada">Fermentada</a></li>
+                        <li><a href="#section-categorias" data-categoria="Fortificada">Fortificada</a></li>
+                        <li><a href="#section-categorias" data-categoria="Destilada">Destilada</a></li>
+                        <li><a href="#section-categorias" data-categoria="Licores">Licores</a></li>
+                        <li><a href="#section-categorias" data-categoria="Bitter" onclick="buscarProdutosPorCategoria('Bitter')">Bitter</a></li>
                     </ul>
                 </li>
                 <li><a class="links" href="#section-sobre">Sobre</a></li>
@@ -132,6 +132,18 @@
         redirecionaHome.addEventListener("click", function () {
 
             window.location.href = "./index.html";
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var listaCategorias = document.getElementById("lista-categorias");
+
+        listaCategorias.addEventListener("click", function (event) {
+            if (event.target.tagName === "A" && event.target.hasAttribute("data-categoria")) {
+                var categoria = event.target.getAttribute("data-categoria");
+                buscarProdutosPorCategoria(categoria);
+            }
         });
     });
 </script>

@@ -3,10 +3,11 @@
     margin: 50px;
     padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 1px solid black;
     text-align: center;
     background-color: white;
+    font-weight: bold;
 }
 
 .card img {
