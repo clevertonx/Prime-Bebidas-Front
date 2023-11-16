@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // ...
 
-    // Adiciona o evento de clique aos botões de exclusão
     const botoesExcluir = document.getElementsByClassName('excluir');
     for (let i = 0; i < botoesExcluir.length; i++) {
         botoesExcluir[i].addEventListener('click', function () {

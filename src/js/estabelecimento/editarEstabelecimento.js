@@ -105,6 +105,3 @@ document.getElementById('form-estabelecimento').addEventListener('submit', salva
 function editarRegistro(idEstabelecimento) {
     window.location.href = './editarEstabelecimento.html?id=' + idEstabelecimento;
 }
-
-
-

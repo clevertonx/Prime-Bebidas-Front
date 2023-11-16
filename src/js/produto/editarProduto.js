@@ -81,6 +81,3 @@ document.getElementById('form-produtos').addEventListener('submit', salvarAltera
 function editarProduto(idProduto) {
     window.location.href = './editarProduto.html?id=' + idProduto;
 }
-
-
-

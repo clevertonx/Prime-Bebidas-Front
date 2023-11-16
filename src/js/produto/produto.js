@@ -246,5 +246,3 @@ window.onload = function () {
     cadastrarProduto();
     aplicarMascarasValidacoes();
 };
-
-
