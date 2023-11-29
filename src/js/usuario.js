@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const senha = senhaInput.value;
 
     if (validarSenha(senha)) {
-      axios.post('http://localhost:8080/usuario/cadastro', { email, senha }, {
+      axios.post('http://localhost:8080/register', { email, senha }, {
         headers: {
           'Content-Type': 'application/json'
         }
