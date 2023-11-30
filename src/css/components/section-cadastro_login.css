@@ -397,6 +397,11 @@ textarea:-moz-placeholder {
     font-weight: bold;
 }
 
+.fechar {
+    font-size: 32px;
+    align-self: end;
+}
+
 .close {
     background-color: red;
     border-radius: 100px;
@@ -423,6 +428,15 @@ textarea:-moz-placeholder {
 
 .close:hover {
     transform: scale(1.05) rotate(-1deg);
+}
+
+#abrirModal{
+    color: var(--preto);
+}
+
+#abrirModal:hover{
+    color: var(--preto);
+    text-decoration:underline;
 }
 
 .modal-recuperar-senha {

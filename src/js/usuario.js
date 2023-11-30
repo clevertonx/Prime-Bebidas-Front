@@ -34,16 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       })
         .then(response => {
+          alert("Sucesso! Por favor, verifique seu e-mail para concluir seu cadastro!");
           window.location.href = 'login.html#paralogin';
           console.log(response.data);
-          if (response.data && response.data.id) {
-            alert("O Usuário foi criado com sucesso");
-          } else {
-            console.log("Resposta inválida do servidor após o cadastro do usuário");
-          }
+          
         })
         .catch(error => {
           console.error(error);
+          alert("Ih, deu ruim, entre em contato com os desenvolvedores!");
         });
     } else {
       document.getElementById('modal-message').textContent = "A senha deve ter de 6 a 8 caracteres, pelo menos uma letra maiúscula e um número.";

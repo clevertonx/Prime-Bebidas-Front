@@ -12,8 +12,8 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
+
 document.getElementById('botao-recuperar-senha').addEventListener('click', function () {
     let email = document.getElementById('email').value;
     console.log('E-mail digitado:', email);
-    // Validar o email antes de envia-lo e adicionar a lógica da requisição
 });

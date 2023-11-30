@@ -40,6 +40,34 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// RECUPERAR A SENHA
+
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('recuperarSenha');
+    const botaoRecuperarSenha = document.getElementById('botao-recuperar-senha');
+    const emailRecuperacaoInput = document.getElementById('email');
+
+    botaoRecuperarSenha.addEventListener('click', function (event) {
+        event.preventDefault();
+        const emailRecuperacao = emailRecuperacaoInput.value;
+
+        axios.post('http://localhost:8080/register/password-reset-request', { emailRecuperacao }, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            console.log("Solicitação de recuperação de senha enviada com sucesso!");
+            alert("Em breve você receberá um e-mail com um link para resetar a sua senha");
+            modal.style.display = 'none'; 
+        })
+        .catch(error => {
+            console.error(error);
+            alert("Houve um erro ao processar sua solicitação. Tente novamente mais tarde.");
+        });
+    });
+});
+
 document.getElementById("logout").addEventListener('click', () => {
     document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     document.cookie = 'idUsuario=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
