@@ -125,6 +125,18 @@
     </section>
 
     <script src="./index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var listaCategorias = document.getElementById("lista-categorias");
+    
+            listaCategorias.addEventListener("click", function (event) {
+                if (event.target.tagName === "A" && event.target.hasAttribute("data-categoria")) {
+                    var categoria = event.target.getAttribute("data-categoria");
+                    buscarProdutosPorCategoria(categoria);
+                }
+            });
+        });
+    </script>
 </body>
 
 <footer id="rodape">

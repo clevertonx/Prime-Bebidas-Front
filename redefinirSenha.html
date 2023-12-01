@@ -14,11 +14,9 @@
 </head>
 <header class="cabecalho">
     <nav class="nav-bar">
-        <div id="link-cabecalho-logado">
-            <h1>Prime Bebidas</h1>
-        </div>
+        <div id="link-cabecalho-logado"> <h1>Prime Bebidas</h1> </div>
         <div class="nav">
-            <ul>
+            <!-- <ul>
                 <li><a href="./logado.html#section-home">Home</a></li>
                 <li>
                     <a href="./produtos.html">Meus Produtos</a>
@@ -30,7 +28,7 @@
                     <a href="./editarPerfil.html">Minhas Informações</a>
                 </li>
                 <li><a id="logout" href="./login.html">Logout</a></li>
-            </ul>
+            </ul> -->
         </div>
     </nav>
     <div class="linha-amarela"></div>
@@ -40,35 +38,19 @@
 
     <div>
         <div class="titulo-section">
-            <h3>Minhas Informações</h3>
+            <h3>Redefinir senha</h3>
         </div>
 
-        <form id="formulario-editar-perfil" method="post" action="http://localhost:8080/register/change-password"
-            class="formulario-editar-perfil">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email-recuperacao" name="email" required>
+        <form id="formulario-editar-perfil" method="put" action="http://localhost:8080/usuario/{id}" class="formulario-editar-perfil">
 
-            <label for="password">Senha atual:</label>
-            <input type="password" id="atual-password-usuario" name="password" required>
             <label for="password">Nova senha:</label>
-            <input type="password" id="nova-password-usuario" name="password" required>
+            <input type="password" id="editar-password-usuario" name="password" required>
             <label for="password">Confirmar senha:</label>
             <input type="password" id="confirm-password-usuario" name="password" required>
 
-            <button id="botao-editar-usuario" type="submit">Salvar</button>
+            <button id="redefinir-nova-senha" type="submit">Salvar</button>
         </form>
-
+        
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var redirecionaHome = document.getElementById("link-cabecalho-logado");
-
-            redirecionaHome.addEventListener("click", function () {
-
-                window.location.href = "./logado.html";
-            });
-        });
-    </script>
 
 </body>
