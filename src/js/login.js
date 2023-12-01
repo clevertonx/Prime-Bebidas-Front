@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     botaoRecuperarSenha.addEventListener('click', function (event) {
         event.preventDefault();
-        const emailRecuperacao = emailRecuperacaoInput.value;
+        const email = emailRecuperacaoInput.value;
 
-        axios.post('http://localhost:8080/register/password-reset-request', { emailRecuperacao }, {
+        axios.post('http://localhost:8080/register/password-reset-request', { email }, {
             headers: {
                 'Content-Type': 'application/json'
             }
