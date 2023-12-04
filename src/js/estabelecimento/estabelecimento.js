@@ -76,12 +76,9 @@ function cadastrarEstabelecimento() {
             window.location.href = 'estabelecimentos.html';
             console.log(response.data);
             if (response.data && response.data.id) {
-                // O servidor retornou uma resposta válida com a propriedade data.id
-                // Prossiga com a configuração do cookie
                 document.cookie = 'idEstabelecimento=' + response.data.id;
                 alert("O estabelecimento " + response.data.nome + " foi criado com sucesso");
             } else {
-                // A resposta do servidor não contém a propriedade data.id
                 console.log("Resposta inválida do servidor após o cadastro do estabelecimento");
             }
             // Gera Cookie para o Estabelecimento cadastrado
@@ -94,8 +91,8 @@ function cadastrarEstabelecimento() {
 }
 document.addEventListener('DOMContentLoaded', function () {
     botaoSubmit.addEventListener('click', (event) => {
-        event.preventDefault(); // Previne o envio padrão do formulário
-        cadastrarEstabelecimento(); // Chama a função para cadastro do estabelecimento
+        event.preventDefault(); 
+        cadastrarEstabelecimento(); 
     });
 });
 
