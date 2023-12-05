@@ -49,6 +49,7 @@ h1 {
     text-decoration: none;
     color: var(--cor-amarelo);
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .nav .links {

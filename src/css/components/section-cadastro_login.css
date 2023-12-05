@@ -135,13 +135,14 @@ input[type="submit"]:hover {
 /*marcando os links para mudar de um formulário para outro */
 .link {
     position: absolute;
-    background: var(--preto);
-    color: white;
+    background: var(--branco);
+    color: black;
     left: 0px;
     height: 30px;
     width: 440px;
     padding: 25px 30px 20px 30px;
     font-size: 16px;
+    font-weight: bold;
     text-align: right;
     border-top: 1px solid #dbe5e8;
 
@@ -400,6 +401,7 @@ textarea:-moz-placeholder {
 .fechar {
     font-size: 32px;
     align-self: end;
+    cursor: pointer;
 }
 
 .close {
@@ -466,4 +468,5 @@ textarea:-moz-placeholder {
 
 .modal-botao-interno{
     margin: 15px;
+    cursor: pointer;
 }
