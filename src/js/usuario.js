@@ -63,9 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function calcularForcaSenha(senha) {
     let strength = 0;
 
-    if (senha.length >= 6 && senha.length <= 8) {
-      strength += 33.33;
-    }
+      strength += Math.min(33.33, senha.length / 8 * 33.33);
 
     if (/[A-Z]/.test(senha)) {
       strength += 33.33;
@@ -83,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return 'Fraca';
     } else if (strength < 80) {
       return 'Média';
-    } else {
+    } else if (strength > 80) {
       return 'Forte';
     }
   }
