@@ -1,6 +1,3 @@
-document.getElementById('tokenInput').value = token;
-console.log(value);
-
 document.addEventListener('DOMContentLoaded', function () {
     const senha = document.getElementById('nova-senha');
     const botaoRedefinirSenha = document.getElementById('redefinir-nova-senha');
@@ -9,20 +6,22 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         const senhaNova = senha.value;
 
-        const formData = new URLSearchParams();
-        formData.append('token', token);
-        formData.append('senhaNova', senhaNova);
+        const token = new URLSearchParams(window.location.search).get('token');
+        document.getElementById('tokenInput').value = token;
 
-        axios.post('http://localhost:8080/register/reset-password',
-            formData
-            , {
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
+        const payload = {
+            senhaNova: senhaNova
+        };
+
+        axios.post(`http://localhost:8080/register/reset-password?token=${token}`, payload, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
             .then(response => {
                 console.log("Solicitação de redefinição de senha enviada com sucesso!");
-                alert("Em breve você receberá um e-mail com um link para resetar a sua senha");
+                alert("Senha redefinida com sucesso");
+                window.location.href = "./login.html";
                 senha.style.display = 'none';
             })
             .catch(error => {
