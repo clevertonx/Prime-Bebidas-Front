@@ -51,17 +51,23 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         const email = emailRecuperacaoInput.value;
 
+        document.getElementById('modal-loading').style.display = 'block';
+        
         axios.post('http://localhost:8080/register/password-reset-request', { email }, {
             headers: {
                 'Content-Type': 'application/json'
             }
         })
         .then(response => {
+            
             console.log("Solicitação de recuperação de senha enviada com sucesso!");
             alert("Em breve você receberá um e-mail com um link para resetar a sua senha");
+            document.getElementById('modal-loading').style.display = 'none';
             modal.style.display = 'none'; 
+            console.log(response.data)
         })
         .catch(error => {
+            document.getElementById('modal-loading').style.display = 'none';
             console.error(error);
             alert("Houve um erro ao processar sua solicitação. Tente novamente mais tarde.");
         });
