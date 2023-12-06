@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const email = emailInput.value;
     const senha = senhaInput.value;
 
+    document.getElementById('modal-loading').style.display = 'block';
+
     if (validarSenha(senha)) {
       axios.post('http://localhost:8080/register', { email, senha }, {
         headers: {
@@ -34,16 +36,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       })
         .then(response => {
+          document.getElementById('modal-loading').style.display = 'none';
           alert("Sucesso! Por favor, verifique seu e-mail para concluir seu cadastro!");
           window.location.href = 'login.html#paralogin';
           console.log(response.data);
           
         })
         .catch(error => {
+          document.getElementById('modal-loading').style.display = 'none';
           console.error(error);
           alert("Ih, deu ruim, entre em contato com os desenvolvedores!");
         });
     } else {
+      document.getElementById('modal-loading').style.display = 'none';
       document.getElementById('modal-message').textContent = "A senha deve ter de 6 a 8 caracteres, pelo menos uma letra maiúscula e um número.";
       document.getElementById('myModal').style.display = 'block';
       document.querySelector('.close').style.display = 'block';
@@ -63,14 +68,16 @@ document.addEventListener('DOMContentLoaded', function () {
   function calcularForcaSenha(senha) {
     let strength = 0;
 
-      strength += Math.min(33.33, senha.length / 8 * 33.33);
+    if (senha.length >= 6 && senha.length <= 8) {
+      strength += 33.33; 
+    }
 
     if (/[A-Z]/.test(senha)) {
       strength += 33.33;
     }
 
     if (/\d/.test(senha)) {
-      strength += 33.33;
+      strength += 33.33; 
     }
 
     return strength;
@@ -89,4 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
   function validarSenha(senha) {
     return (senha.length >= 6 && senha.length <= 8 && /[A-Z]/.test(senha) && /\d/.test(senha));
   }
+
+  $(function(){
+    $('#modal-loading').modal('show');
+  });
 });

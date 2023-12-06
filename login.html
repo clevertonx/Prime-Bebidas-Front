@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="./src/css/base.css"/>
+    <link rel="stylesheet" href="./src/css/base.css" />
     <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./src/js/usuario.js" defer></script>
     <script src="./src/js/login.js" defer></script>
@@ -42,104 +42,114 @@
 </header>
 
 <body>
-<div>
-    <h3 class="titulo-section">Login</h3>
-</div>
-<div class="container">
-    <a class="links" id="paracadastro"></a>
-    <a class="links" id="paralogin"></a>
+    <div>
+        <h3 class="titulo-section">Login</h3>
+    </div>
+    <div class="container">
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
 
-    <div class="content">
-        <!--FORMULÁRIO DE CADASTRO-->
-        <div id="cadastro">
-            <form method="post" action="http://localhost:8080/register">
-                <h5>Cadastro</h5>
+        <div class="content">
+            <!--FORMULÁRIO DE CADASTRO-->
+            <div id="cadastro">
+                <form method="post" action="http://localhost:8080/register">
+                    <h5>Cadastro</h5>
+                    <div class="modal-loading" id="modal-loading" data-backdrop="static" style="display: none;">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    <div class="loading-spinner mb-2"></div>
+                                    <div>Carregando</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="email_cad">Seu e-mail</label>
+                        <input id="email_cad" name="email_cad" required="required" type="email"
+                            placeholder="contato@email.com" />
+                    </p>
 
-                <p>
-                    <label for="email_cad">Seu e-mail</label>
-                    <input id="email_cad" name="email_cad" required="required" type="email"
-                           placeholder="contato@email.com"/>
-                </p>
+                    <p>
+                        <label for="senha_cad">Sua senha</label>
+                        <input id="senha_cad" name="senha_cad" required="required" type="password" autocomplete="on"
+                            placeholder="1234" />
+                    </p>
+                    <div class="password-strength">
+                        <progress id="strength-bar" min="0" max="100" value="0" class="strength-bar"></progress>
+                        <span id="strength-text" class="strength-text">Força da Senha: Fraca</span>
+                    </div>
 
-                <p>
-                    <label for="senha_cad">Sua senha</label>
-                    <input id="senha_cad" name="senha_cad" required="required" type="password" autocomplete="on"
-                           placeholder="1234"/>
-                </p>
-                <div class="password-strength">
-                    <progress id="strength-bar" min="0" max="100" value="0" class="strength-bar"></progress>
-                    <span id="strength-text" class="strength-text">Força da Senha: Fraca</span>
-                </div>
+                    <p>
+                        <button id="botao-cad" type="submit" value="Cadastrar">Cadastrar</button>
+                    </p>
 
-                <p>
-                    <button id="botao-cad" type="submit" value="Cadastrar">Cadastrar</button>
-                </p>
-
-                <p class="link">
-                    Já tem conta?
-                    <a href="#paralogin"> Ir para Login </a>
-                </p>
-            </form>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <p id="modal-message"></p>
-                    <span class="close">&times;</span>
-                </div>
-            </div>
-        </div>
-        <!--FORMULÁRIO DE LOGIN-->
-        <div id="login">
-            <form method="post" action="http://localhost:8080/usuario/login">
-                <h5>Login</h5>
-                <p>
-                    <label for="email_login">Seu e-mail</label>
-                    <input id="email_login" name="email_login" required="required" type="text"
-                           placeholder="contato@email.com"/>
-                </p>
-
-                <p>
-                    <label for="senha_login">Sua senha</label>
-                    <input id="senha_login" name="senha_login" required="required" autocomplete="on" type="password"
-                           placeholder="1234"/>
-                </p>
-                <p>
-                    <button id="botao-login" type="submit" value="Login">Login</button>
-                </p>
-
-                <p class="recuperar-senha">
-                    <a href="#" id="abrirModal">Esqueceu a senha?</a>
-                </p>
-
-                <div id="recuperarSenha" class="modal">
-                    <div class="modal-recuperar-senha">
-                        <span class="fechar">&times;</span>
-                        <h2 class="modal-titulo">Recuperar Senha</h2>
-                        <h3 class="modal-menssagem"> Informe seu e-mail de cadastro: </h3>
-                        <input type="email" id="email" placeholder="Digite seu e-mail">
-                        <button id="botao-recuperar-senha" class="modal-botao-interno">Enviar</button>
-                        <span>**Em breve você receberá um e-mail com um link para resetar a sua senha</span>
+                    <p class="link">
+                        Já tem conta?
+                        <a href="#paralogin"> Ir para Login </a>
+                    </p>
+                </form>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <p id="modal-message"></p>
+                        <span class="close">&times;</span>
                     </div>
                 </div>
 
-                <p class="link">
-                    Ainda não tem conta?
-                    <a href="#paracadastro">Cadastre-se</a>
-                </p>
-            </form>
+            </div>
+            <!--FORMULÁRIO DE LOGIN-->
+            <div id="login">
+                <form method="post" action="http://localhost:8080/usuario/login">
+                    <h5>Login</h5>
+                    <p>
+                        <label for="email_login">Seu e-mail</label>
+                        <input id="email_login" name="email_login" required="required" type="text"
+                            placeholder="contato@email.com" />
+                    </p>
+
+                    <p>
+                        <label for="senha_login">Sua senha</label>
+                        <input id="senha_login" name="senha_login" required="required" autocomplete="on" type="password"
+                            placeholder="1234" />
+                    </p>
+                    <p>
+                        <button id="botao-login" type="submit" value="Login">Login</button>
+                    </p>
+
+                    <p class="recuperar-senha">
+                        <a href="#" id="abrirModal">Esqueceu a senha?</a>
+                    </p>
+
+                    <div id="recuperarSenha" class="modal">
+                        <div class="modal-recuperar-senha">
+                            <span class="fechar">&times;</span>
+                            <h2 class="modal-titulo">Recuperar Senha</h2>
+                            <h3 class="modal-menssagem"> Informe seu e-mail de cadastro: </h3>
+                            <input type="email" id="email" placeholder="Digite seu e-mail">
+                            <button id="botao-recuperar-senha" class="modal-botao-interno">Enviar</button>
+                            <span>**Em breve você receberá um e-mail com um link para resetar a sua senha</span>
+                        </div>
+                    </div>
+
+                    <p class="link">
+                        Ainda não tem conta?
+                        <a href="#paracadastro">Cadastre-se</a>
+                    </p>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var redirecionaHome = document.getElementById("link-cabecalho");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var redirecionaHome = document.getElementById("link-cabecalho");
 
-        redirecionaHome.addEventListener("click", function () {
+            redirecionaHome.addEventListener("click", function () {
 
-            window.location.href = "./index.html";
+                window.location.href = "./index.html";
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 

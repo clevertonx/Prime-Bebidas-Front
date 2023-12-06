@@ -392,8 +392,10 @@ textarea:-moz-placeholder {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    height: 5%;
+    height: 25%;
+    width: 90%;
     align-items: center;
+    justify-content: center;
     display: flex;
     font-weight: bold;
 }
@@ -432,13 +434,13 @@ textarea:-moz-placeholder {
     transform: scale(1.05) rotate(-1deg);
 }
 
-#abrirModal{
+#abrirModal {
     color: var(--preto);
 }
 
-#abrirModal:hover{
+#abrirModal:hover {
     color: var(--preto);
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .modal-recuperar-senha {
@@ -466,7 +468,38 @@ textarea:-moz-placeholder {
     align-self: flex-start;
 }
 
-.modal-botao-interno{
+.modal-botao-interno {
     margin: 15px;
     cursor: pointer;
+}
+
+.modal-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: none;
+    width: 70%;
+    height: 50%;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--cor-amarelo);
+    border-radius: 50%;
+    border-top-color: #0001;
+    display: inline-block;
+    animation: loadingspinner .7s linear infinite;
+}
+
+@keyframes loadingspinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
 }

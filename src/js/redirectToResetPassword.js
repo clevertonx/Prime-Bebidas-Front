@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
             senhaNova: senhaNova
         };
 
+
         axios.post(`http://localhost:8080/register/reset-password?token=${token}`, payload, {
             headers: {
                 'Content-Type': 'application/json'
