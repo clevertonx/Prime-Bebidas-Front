@@ -9,12 +9,17 @@ function preencherCamposProduto(produto) {
     document.getElementById('marca').value = produto.marca;
     document.getElementById('preco').value = produto.preco;
     document.getElementById('categoria').value = produto.categoria;
+    document.getElementById('imagem').value = produto.imagem;
+    
 }
 
 function carregarProduto(idProduto) {
+    const token = valorCookie('token');
+
     axios.get('http://localhost:8080/produto/' + idProduto, {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         }
     })
         .then(function (response) {
@@ -44,6 +49,7 @@ function salvarAlteracoes(event) {
     const marca = document.getElementById('marca').value;
     const preco = document.getElementById('preco').value;
     const categoria = document.getElementById('categoria').value;
+    const imagem = document.getElementById('imagem').value;
     // Obtenha os valores dos outros campos aqui...
 
     // Crie um objeto com os dados do estabelecimento
@@ -53,6 +59,7 @@ function salvarAlteracoes(event) {
         marca: marca,
         preco: preco,
         categoria: categoria,
+        imagem: imagem,
         // Adicione os outros campos ao objeto aqui...
     };
 
@@ -64,7 +71,7 @@ function salvarAlteracoes(event) {
             // Alterações salvas com sucesso
             console.log(response.data);
             // Faça algo após salvar as alterações, como redirecionar para outra página
-            const url = `./produtos.html?id=${idProduto}&nome=${nome}&descricao=${descricao}&marca=${marca}&preco=${preco}&categoria=${categoria}`;
+            const url = `./produtos.html?id=${idProduto}&nome=${nome}&descricao=${descricao}&marca=${marca}&preco=${preco}&categoria=${categoria}&imagem=${categoria}&imagem=${imagem}`;
             // Navegue para a página anterior com os dados atualizados
             window.location.href = url;
         })
