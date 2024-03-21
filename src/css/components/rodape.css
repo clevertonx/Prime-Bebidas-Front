@@ -1,10 +1,11 @@
 #rodape {
     height: 10vh;
-    background: rgb(0, 0, 0);
+    background: #9b5a44;
     color: white;
     padding: 30px;
     align-items: start;
     display: flex;
+    margin-top: 40%;
 }
 
 #rodape h6 {

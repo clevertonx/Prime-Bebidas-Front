@@ -9,9 +9,7 @@
     background-color: var(--preto);
 }
 
-.imagem-sobreposto {
-    display: flex;
-}
+
 
 .texto-sobreposto {
     position: absolute;
@@ -30,9 +28,5 @@
     padding: 15px;
 }
 
-#section-sobre img {
-    position: relative;
-    transform: translate(45%, -3%);
-    height: 80vh;
-}
+
 

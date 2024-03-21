@@ -8,18 +8,15 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/js/estabelecimento/estabelecimento.js" defer></script>
-    <script src="./src/js/estabelecimento/excluirEstabelecimento.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
-    
 
     <title>Meus Estabelecimentos - Prime Bebidas</title>
 </head>
 <header class="cabecalho">
     <nav class="nav-bar">
-        <div id="link-cabecalho-logado"> <h1>Prime Bebidas</h1> </div>
+        <div id="link-cabecalho-logado">
+            <h1>Prime Bebidas</h1>
+        </div>
         <div class="nav">
             <ul>
                 <li><a href="./logado.html#section-home">Home</a></li>
@@ -74,13 +71,18 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var redirecionaHome = document.getElementById("link-cabecalho-logado");
-    
+
             redirecionaHome.addEventListener("click", function () {
-  
-                window.location.href = "./logado.html"; 
+
+                window.location.href = "./logado.html";
             });
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+    <script src="./src/js/estabelecimento/excluirEstabelecimento.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 
 </body>
 

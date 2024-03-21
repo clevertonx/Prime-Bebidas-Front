@@ -46,9 +46,11 @@ function cadastrarEstabelecimento() {
     const nome = document.getElementById('nome').value;
     const telefone = document.getElementById('telefone').value;
     const horarioAtendimento = document.getElementById('horarioAtendimento').value;
+    const cep = document.getElementById('cep').value;
     const numero = document.getElementById('numero').value;
     const cidade = document.getElementById('cidade').value;
     const logradouro = document.getElementById('logradouro').value;
+    const bairro = document.getElementById('bairro').value;
     const estado = document.getElementById('estado').value;
     const cnpj = document.getElementById('cnpj').value;
 
@@ -57,9 +59,11 @@ function cadastrarEstabelecimento() {
         nome,
         telefone,
         horarioAtendimento,
+        cep,
         numero,
         cidade,
         logradouro,
+        bairro,
         estado,
         cnpj,
         idUsuario: idUsuario

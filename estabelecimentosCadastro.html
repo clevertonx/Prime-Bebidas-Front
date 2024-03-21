@@ -12,13 +12,16 @@
     <script src="./src/js/estabelecimento/estabelecimento.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js" type="text/javascript" defer></script>
 
 
     <title>Cadastro de Estabelecimento - Prime Bebidas</title>
 </head>
 <header class="cabecalho">
     <nav class="nav-bar">
-        <div id="link-cabecalho-logado"> <h1>Prime Bebidas</h1> </div>
+        <div id="link-cabecalho-logado">
+            <h1>Prime Bebidas</h1>
+        </div>
         <div class="nav">
             <ul>
                 <li><a href="./logado.html#section-home">Home</a></li>
@@ -59,6 +62,9 @@
             <label for="horarioAtendimento">Horário de Atendimento:</label>
             <input type="text" name="horarioAtendimento" id="horarioAtendimento" placeholder="__:__ ás __:__" required>
 
+            <label for="cep">Cep:</label>
+            <input type="text" id="cep" maxlength="9" placeholder="13483-000" autofocus="">
+
             <label for="numero">Número:</label>
             <input type="text" name="numero" id="numero" placeholder="Número do estabelecimento" required>
 
@@ -68,11 +74,14 @@
             <label for="logradouro">Logradouro:</label>
             <input type="text" name="logradouro" id="logradouro" placeholder="Endereço" required>
 
+            <label for="logradouro">Bairro:</label>
+            <input type="text" name="bairro" id="bairro" placeholder="Bairro" required>
+
             <label for="estado">Estado:</label>
             <input type="text" name="estado" id="estado" placeholder="Sigla do estado" required>
 
             <label for="cnpj">CNPJ:</label>
-            <input type="text" name="cnpj" id="cnpj" placeholder="Nome do estabelecimento" required>
+            <input type="text" name="cnpj" id="cnpj" placeholder="99.999.999/9999-99" required>
 
             <button id="botao-estabelecimento" type="submit">Cadastrar</button>
         </form>
@@ -81,12 +90,50 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var redirecionaHome = document.getElementById("link-cabecalho-logado");
-    
+
             redirecionaHome.addEventListener("click", function () {
-  
-                window.location.href = "./logado.html"; 
+
+                window.location.href = "./logado.html";
             });
         });
+    </script>
+    <script>
+
+
+        $(document).ready(function () {
+
+            $("#cep").mask("99999-999", {
+                completed: function () {
+                    var cep = $(this).val().replace(/[^0-9]/, "");
+
+                    // Validação do CEP; caso o CEP não possua 8 números, então cancela
+                    // a consulta
+                    if (cep.length != 8) {
+                        return false;
+                    }
+
+                    // A url de pesquisa consiste no endereço do webservice + o cep que
+                    // o usuário informou + o tipo de retorno desejado (entre "json",
+                    // "jsonp", "xml", "piped" ou "querty")
+                    var url = "https://viacep.com.br/ws/" + cep + "/json/";
+
+                    $.getJSON(url, function (dadosRetorno) {
+                        try {
+                            // Preenche os campos de acordo com o retorno da pesquisa
+                            $("#logradouro").val(dadosRetorno.logradouro);
+                            $("#bairro").val(dadosRetorno.bairro);
+                            $("#cidade").val(dadosRetorno.localidade);
+                            $("#estado").val(dadosRetorno.uf);
+                            $("#nr_end").focus();
+                        } catch (ex) { }
+                    });
+                }
+            });
+
+        });
+
+
+
     </script>
 
 </body>

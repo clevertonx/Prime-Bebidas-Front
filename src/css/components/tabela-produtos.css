@@ -43,6 +43,5 @@ button:hover {
 }
 
 .nav-categorias ul li a {
-    color: var(--cor-amarelo);
     transition: 0.3s;
 }

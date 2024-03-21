@@ -31,17 +31,19 @@
 
 .nav-categorias a {
     text-decoration: none;
-    color: var(--cinza);
-    padding: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
     border: solid;
     border-radius: 5px;
     border-width: 1px;
     cursor: pointer;
+    background-color: #9b5a44;
 }
 
 .nav-categorias a:hover {
-    background-color: var(--cor-amarelo);
-    color: var(--preto);
+    background-color: #5e3d2c;
+    color: white;
     font-weight: bold;
     text-decoration: underline;
     border-color: var(--cor-amarelo);

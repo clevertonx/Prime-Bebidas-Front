@@ -1,5 +1,5 @@
 .cabecalho {
-    background: rgb(0, 0, 0);
+    background: #9b5a44;
     color: white;
     font-family: 'Roboto', sans-serif;
     height: 6vh;
@@ -35,7 +35,7 @@ h1 {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    background: linear-gradient(180deg, rgba(0, 0, 00, 1) 52%, rgba(0, 0, 00, 1) 52%);
+    background: #9b5a44;
 }
 
 .nav li {
@@ -47,7 +47,7 @@ h1 {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: var(--cor-amarelo);
+    color: var(--branco);
     font-weight: bolder;
     cursor: pointer;
 }

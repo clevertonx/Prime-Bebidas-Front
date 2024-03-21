@@ -42,7 +42,13 @@ button:hover {
     transition: 0.3s;
 }
 
-.nav-categorias ul li a {
+.nav-categorias ul li {
     color: var(--cor-amarelo);
     transition: 0.3s;
+}
+
+.nav-categorias ul li a {
+    color: white;
+    transition: 0.3s;
+    border-color: #9b5a44;
 }
