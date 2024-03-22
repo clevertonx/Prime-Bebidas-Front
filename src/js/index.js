@@ -1,17 +1,19 @@
-const links = document.querySelectorAll('.links');
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav a');
 
-links.forEach(link => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
 
-        const targetId = link.getAttribute('href'); 
-        const targetSection = document.querySelector(targetId); 
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
 
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop, 
-                behavior: 'smooth' 
-            });
-        }
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
+
