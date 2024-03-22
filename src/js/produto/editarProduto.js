@@ -8,13 +8,23 @@ function preencherCamposProduto(produto) {
     document.getElementById('descricao').value = produto.descricao;
     document.getElementById('marca').value = produto.marca;
     document.getElementById('preco').value = produto.preco;
-    document.getElementById('categoria').value = produto.categoria;
+    var selectCategoria = document.getElementById('categoria');
+    for (var i = 0; i < selectCategoria.options.length; i++) {
+        if (selectCategoria.options[i].value === produto.categoria) {
+            selectCategoria.selectedIndex = i;
+            break;
+        }
+    }
 }
 
+
 function carregarProduto(idProduto) {
+    const token = valorCookie('token');
+
     axios.get('http://localhost:8080/produto/' + idProduto, {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
         }
     })
         .then(function (response) {

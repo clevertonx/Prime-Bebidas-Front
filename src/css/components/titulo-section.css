@@ -6,13 +6,13 @@
     line-height: 1.5;
     justify-content: center;
     display: flex;
-    color: var(--cor-amarelo);
+    color: #5e3d2c;
     padding: 70px 25px 70px 25px;
     font-weight: bolder;
     font-size: 1.5vw;
     text-decoration: underline;
     text-underline-offset: 20px;
-    text-decoration-color: var(--cor-amarelo);
+    text-decoration-color: #e2954d;
     text-decoration-thickness: 3px;
 
 }

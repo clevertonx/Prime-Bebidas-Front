@@ -34,19 +34,17 @@
     color: white;
     font-weight: bold;
     padding: 8px;
-    border: solid;
     border-radius: 5px;
-    border-width: 1px;
     cursor: pointer;
-    background-color: #9b5a44;
+    background-color: #5e3d2c;
 }
 
 .nav-categorias a:hover {
-    background-color: #5e3d2c;
+    background-color: #e2954d;
     color: white;
     font-weight: bold;
     text-decoration: underline;
-    border-color: var(--cor-amarelo);
+    border-color: #e2954d;
     border-radius: 5px;
     text-decoration: none;
 }
