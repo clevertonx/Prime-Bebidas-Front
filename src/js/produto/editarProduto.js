@@ -33,7 +33,7 @@ function carregarProduto(idProduto) {
         });
 }
 
-// Obtém o ID do estabelecimento da URL e carrega os dados do estabelecimento correspondente
+// Obtém o ID do produto da URL e carrega os dados do produto correspondente
 const idProduto = obterIdProduto();
 carregarProduto(idProduto);
 
@@ -65,8 +65,15 @@ function salvarAlteracoes(event) {
 
     produto['_method'] = 'PUT';
 
+    const token = valorCookie('token');
+
     // Faça uma requisição PUT para salvar as alterações
-    axios.put(`http://localhost:8080/produto/${idProduto}`, produto)
+    axios.put(`http://localhost:8080/produto/${idProduto}`, produto, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }
+    })
         .then(function (response) {
             // Alterações salvas com sucesso
             console.log(response.data);
@@ -88,3 +95,14 @@ document.getElementById('form-produtos').addEventListener('submit', salvarAltera
 function editarProduto(idProduto) {
     window.location.href = './editarProduto.html?id=' + idProduto;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // var redirecionaHome = document.getElementById("link-cabecalho-logado");
+
+    // redirecionaHome.addEventListener("click", function () {
+    //     window.location.href = "./logado.html";
+    // });
+
+    // Adiciona o ouvinte de evento de clique ao botão "Salvar"
+    document.getElementById('botao-editarProduto').addEventListener('click', salvarAlteracoes);
+});
