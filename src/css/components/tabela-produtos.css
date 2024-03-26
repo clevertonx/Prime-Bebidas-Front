@@ -11,35 +11,12 @@
 }
 
 #tabela-produto td {
-    border: 2px solid var(--cinza);
+    border: 2px solid #5e3d2c;
+    border-color: #5e3d2c;
     font-size: 14px;
     font-style: normal;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
-}
-
-.tabela-cabecalho th {
-    padding: 10px;
-    color: var(--cor-amarelo);
-    border: 2px solid var(--cinza);
-    font-family: 'Roboto', sans-serif;
-}
-
-button {
-    background-color: var(--preto);
-    color: var(--cor-amarelo);
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    transition: 0.3s;
-    background-color: var(--cor-amarelo);
-    color: var(--preto);
-    font-weight: bold;
 }
 
 .nav-categorias ul li a {

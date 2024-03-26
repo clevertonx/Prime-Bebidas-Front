@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./src/css/base.css" />
-
-
+    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="./src/js/usuario.js" defer></script>
+    <script src="./src/js/login.js" defer></script>
+    <script src="./src/js/modal.js" defer></script>
     <title>Login - Prime Bebidas</title>
 </head>
 <header class="cabecalho">
@@ -49,7 +51,7 @@
         <div class="content">
             <!--FORMULÁRIO DE CADASTRO-->
             <div id="cadastro">
-                <form method="post" action="http://localhost:8080/register">
+                <form method="post" action="http://localhost:8080/register/registrarUsuario">
                     <h5>Cadastro</h5>
                     <div class="modal-loading" id="modal-loading" data-backdrop="static" style="display: none;">
                         <div class="modal-dialog modal-sm">
@@ -147,10 +149,7 @@
             });
         });
     </script>
-    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
-    <script src="./src/js/usuario.js" defer></script>
-    <script src="./src/js/login.js" defer></script>
-    <script src="./src/js/modal.js" defer></script>
+
 </body>
 
 <footer id="rodape-login">

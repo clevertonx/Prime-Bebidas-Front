@@ -1,20 +1,8 @@
-#tabela-dinamica {
-    width: 90%;
-    margin: 85px;
-    border: 3px solid #ddd;
-    text-align: center;
-    background-color: white;
-    border-color: var(--preto);
-}
 
-.tabela-cabecalho {
-    border-color: var(--cinza);
-    border: 3px solid var(--);
-}
 
 #tabela-body td {
-    border: 2px solid var(--preto);
-    border-color: var(--cinza);
+    border: 2px solid #5e3d2c;
+    border-color: #5e3d2c;
     font-size: 14px;
     font-style: normal;
     padding: 10px;
@@ -24,22 +12,36 @@
 .tabela-cabecalho th {
     padding: 10px;
     color: white;
-    background-color: var(--preto);
+    background-color: #9b5a44;
 
 }
 
-button {
-    background-color: var(--cor-amarelo);
+.editar {
+    background-color: #5e3d2c;
     color: white;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+.excluir {
+    background-color: #5e3d2c;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.editar:hover {
     transition: 0.3s;
+    background-color: #e2954d;
+    color: white;
+}
+
+.excluir:hover {
+    transition: 0.3s;
+    background-color: #e2954d;
+    color: white;
 }
 
 .nav-categorias ul li {

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('modal-loading').style.display = 'block';
 
     if (validarSenha(senha)) {
-      axios.post('http://localhost:8080/register', { email, senha }, {
+      axios.post('http://localhost:8080/register/registrarUsuario', { email, senha }, {
         headers: {
           'Content-Type': 'application/json'
         }
